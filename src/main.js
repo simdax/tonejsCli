@@ -9,11 +9,11 @@ Vue.use(VueX)
 
 const store = new VueX.Store({
 	state: {
-		code: ''
+		code: '0,1,2,3,4,5,1'
 	},
 	getters: {
 		code: s => {
-			return s.state.code
+			return s.code
 		}
 	},
 	mutations: {
@@ -22,7 +22,9 @@ const store = new VueX.Store({
 		}
 	},
 	actions: {
-		// set
+		setCode ({commit}, val) {
+			commit('SET_CODE', val)
+		}
 	}
 })
 

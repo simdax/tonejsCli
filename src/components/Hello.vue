@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <textarea v-model="code"></textarea>
+    <input v-model="code" @input="setCode($event.target.value)"/>
     <button @click="generate"> generate </button>
   </div>
 </template>
@@ -8,14 +8,18 @@
 <script>
 
 import Tone from 'tone'
+import {mapGetters, mapActions} from 'vuex'
 
 Tone.Transport.start()
 var sound = new Tone.AMSynth().toMaster()
 global.t = Tone
 
 export default {
-  name: 'hello',
+  computed: {
+    ...mapGetters(['code'])
+  },
   methods: {
+    ...mapActions(['setCode']),
     generate () {
       // console.log(Tone.Notation('A4').toMidi())
       sound.triggerAttackRelease(70, 1)
@@ -26,11 +30,6 @@ export default {
       }, this.code.split(','))
       sequence.loop = false
       sequence.start()
-    }
-  },
-  data () {
-    return {
-      code: ''
     }
   }
 }
