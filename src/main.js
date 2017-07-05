@@ -7,23 +7,12 @@ import router from './router'
 
 Vue.use(VueX)
 
+// global interface to app
 const store = new VueX.Store({
-	state: {
-		code: '0,1,2,3,4,5,1'
-	},
-	getters: {
-		code: s => {
-			return s.code
-		}
-	},
-	mutations: {
-		SET_CODE (s, val) {
-			s.code = val
-		}
-	},
 	actions: {
-		setCode ({commit}, val) {
-			commit('SET_CODE', val)
+		setCode ({commit}, val, ns) {
+			console.log(val, ns)
+			commit(ns + '/SET_CODE', val)
 		}
 	}
 })

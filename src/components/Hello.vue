@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <input v-model="code" @input="setCode($event.target.value)"/>
+    <input v-model="code"/>
     <button @click="generate"> generate </button>
   </div>
 </template>
@@ -8,25 +8,33 @@
 <script>
 
 import Tone from 'tone'
-import {mapGetters, mapActions} from 'vuex'
-
+// import {mapActions} from 'vuex'
+import store from '../store'
 Tone.Transport.start()
-var sound = new Tone.AMSynth().toMaster()
-global.t = Tone
 
 export default {
+  props: ['ns'],
+  created () {
+    this.$store.registerModule(this.ns, store)
+    this.sound = new Tone.AMSynth().toMaster()
+  },
   computed: {
-    ...mapGetters(['code'])
+    // ...mapGetters(['code'])
+    code: {
+      get () {
+        return this.$store.state[this.ns].code
+      },
+      set (value) {
+        return this.$store.commit(this.ns + '/SET_CODE', value)
+      }
+    }
   },
   methods: {
-    ...mapActions(['setCode']),
+    // ...mapActions(['setCode']),
     generate () {
-      // console.log(Tone.Notation('A4').toMidi())
-      sound.triggerAttackRelease(70, 1)
       var sequence = new Tone.Sequence((t, v) => {
         var freq = Tone.Frequency().midiToFrequency(60 + parseInt(v))
-        console.log(v)
-        sound.triggerAttackRelease(freq, 1)
+        this.sound.triggerAttackRelease(freq, 1)
       }, this.code.split(','))
       sequence.loop = false
       sequence.start()
