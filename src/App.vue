@@ -4,7 +4,7 @@
     <router-view ns="bob"></router-view>
     <router-view ns="bib"></router-view>
     <div id="settings">
-      <input type="range" max="200" min="1" v-model='tempo' @change="setTempo">
+      <input type="range" max="200" min="1" v-model='tempo' @input="setTempo">
       <button @click="toggle"> stop </button>
       <button @click="panic"> panic </button>
     </div>

@@ -3,7 +3,16 @@
     <in v-model='mel' :placeholder="mel" >mel</in>
     <in v-model='rythme' :placeholder="rythme">rythme</in>
     <in v-model='scale' :placeholder="scale">scale</in>
-    <input type="range" min="-40" max="10" steps="1" v-model="volume" @input="setGain"></range>
+    <div>      
+      timber
+      <select v-model="timber" name="" id="" @change="setTimber">
+        <option v-for="n in ['AMSynth','PluckSynth']" :value="n" >{{n}}</option>
+      </select>
+    </div>
+    <div>      
+      gain
+      <input type="range" min="-40" max="10" steps="1" v-model="volume" @input="setGain"></range>
+    </div>
     <button ref="but" @click="generate" v-text="state" :style='style'></button>
   </div>
 </template>
@@ -24,6 +33,7 @@ export default {
   },
   data () {
     return {
+      timber: 'AMSynth',
       volume: 0.2,
       active: false
     }
@@ -40,8 +50,13 @@ export default {
     ...setComputed('mel,rythme,scale'.split(','))
   },
   methods: {
+    setTimber () {
+      console.log(this.timber)
+      // kill old one ?
+      this.sound = new Tone[this.timber]().toMaster()
+    },
     create () {
-      this.sound = new Tone.AMSynth().toMaster()
+      this.sound = new Tone[this.timber]().toMaster()
       this.sequence = new Tone.Sequence((t, v) => {
         v = parseInt(v)
         var scale = this.scale.split(',')
