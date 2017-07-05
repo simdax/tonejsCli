@@ -52,7 +52,7 @@ export default {
         if (!isNaN(freq)) {
           this.sound.triggerAttackRelease(freq, this.sequence.subdivision)
         }
-      }, this.mel.split(','), '4n')
+      }, [this.mel.split(',')], '4n')
       this.sequence.loop = true
     },
     setGain (v) {
@@ -69,18 +69,20 @@ export default {
       this.sequence.stop()
       this.active = false
     },
+    play () {
+      if (Tone.Transport.state === 'stopped') {
+        Tone.Transport.start()
+        this.sequence.start()
+      } else {
+        this.sequence.start('@1m')
+      }
+      this.active = true
+    },
     generate () {
       if (this.sequence.state === 'started') {
         this.stop()
       } else {
-        if (Tone.Transport.state === 'stopped') {
-          Tone.Transport.start()
-          this.sequence.start()
-        } else {
-                    // this.sequence.start()
-          this.sequence.start('@1m')
-        }
-        this.active = true
+        this.play()
       }
     }
   }

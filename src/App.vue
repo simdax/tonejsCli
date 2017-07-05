@@ -5,7 +5,7 @@
     <router-view ns="bib"></router-view>
     <div id="settings">
       <input type="range" max="200" min="1" v-model='tempo' @change="setTempo">
-      <button @click="stop"> stop </button>
+      <button @click="toggle"> stop </button>
       <button @click="panic"> panic </button>
     </div>
   </div>
@@ -20,7 +20,7 @@ export default {
   name: 'app',
   data () {
     return {
-      tempo: 120
+      tempo: 100
     }
   },
   methods: {
@@ -31,6 +31,26 @@ export default {
       for (var i = 0; i < this.$children.length; i++) {
         var child = this.$children[i]
         child.stop()
+      }
+    },
+    all () {
+      for (var i = 0; i < this.$children.length; i++) {
+        var child = this.$children[i]
+        child.play()
+      }
+    },
+    toggle () {
+      // toggles all if one is stopped, else stop all
+      var children = this.$children
+      loop: {
+        for (var i = 0; i < children.length; i++) {
+          var child = children[i]
+          if (child.sequence.state === 'stopped') {
+            this.all()
+            break loop
+          }
+        }
+        this.stop()
       }
     },
     panic () {
