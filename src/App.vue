@@ -1,13 +1,12 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <container ref="generator"></container>
     <button id="addCell" @click="$refs.generator.add()">add cell</button>
     <div id="settings">
       <input type="range" max="200" min="1" v-model='tempo' @input="setTempo">
       <button @click="toggle"> stop </button>
       <button @click="panic"> panic </button>
     </div>
+    <container ref="generator"></container>
   </div>
 </template>
 
@@ -86,12 +85,19 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+  #settings{
+     background: url(./assets/logo.png);
+     /*position: fixed;*/
+     top: 0;
+     height: 100px;
+     width: 100%;
+  }
+  #app {
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 60px;
+  }
 </style>

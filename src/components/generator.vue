@@ -1,6 +1,6 @@
 <template>
-  <div class="hello">
-    <div class="close" @click="$emit('kill',ns)">X</div>
+  <div class="generator">
+    <div class="close" @click="kill">X</div>
     <in v-model='mel' :placeholder="mel" >mel</in>
     <in v-model='rythme' :placeholder="rythme">rythme</in>
     <in v-model='scale' :placeholder="scale">scale</in>
@@ -51,6 +51,10 @@ export default {
     ...setComputed('mel,rythme,scale'.split(','))
   },
   methods: {
+    kill () {
+      this.stop()
+      this.$emit('kill', this.ns)
+    },
     setTimber () {
       // kill old one ?
       this.sound = new Tone[this.timber]().toMaster()
@@ -110,11 +114,12 @@ export default {
 .close{
 
 }
-.hello{
+.generator{
+  border: 1px solid;
   display: flex;
   flex-flow: column;
-  /*justify-content: center;*/
-  align-items: center;
+  justify-content: center;
+  align-content: center;
 }
 
 h1, h2 {
