@@ -17,9 +17,13 @@ module.exports = {
   ],
   // add your custom rules here
   'rules': {
+    // perso 
     'no-tabs':0,
     'no-labels':0,
     'indent':0,
+    'no-mixed-spaces-and-tabs':0,
+    // 'no-trailing-spaces': 0,
+    // 'eol-last': 0,
     // allow paren-less arrow functions
     'arrow-parens': 0,
     // allow async-await

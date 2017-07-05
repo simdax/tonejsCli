@@ -21,7 +21,7 @@
 </style>
 
 <script>
-	import generator from './components/generator.vue'
+	import generator from '@/components/generator'
 	export default {
 		components: {generator},
 		data () {

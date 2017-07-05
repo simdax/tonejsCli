@@ -24,7 +24,7 @@
 <script>
 
 import Tone from 'tone'
-import container from './container.vue'
+import container from '@/components/container'
 global.t = Tone
 
 export default {
