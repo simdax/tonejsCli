@@ -3,8 +3,8 @@
     <in v-model='mel' :placeholder="mel" >mel</in>
     <in v-model='rythme' :placeholder="rythme">rythme</in>
     <in v-model='scale' :placeholder="scale">scale</in>
-    <input type="range" min="10" max="200" v-model="tempo" @change="setTempo"></range>
-    <button @click="generate" v-text="state"></button>
+    <input type="range" min="-40" max="10" steps="1" v-model="volume" @input="setGain"></range>
+    <button ref="but" @click="generate" v-text="state" :style='style'></button>
   </div>
 </template>
 
@@ -15,55 +15,72 @@ import store from '../store'
 import input from './input.vue'
 import {createMel, setComputed} from './doMel'
 
-Tone.Transport.start()
-global.t = Tone
-
 export default {
   props: ['ns'],
   components: {in: input},
   created () {
     this.$store.registerModule(this.ns, store)
-    this.sound = new Tone.AMSynth().toMaster()
-    this.sequence = new Tone.Sequence((t, v) => {
-      var midi = parseInt(this.scale.split(',')[parseInt(v) % this.scale.length])
-      var freq = Tone.Frequency().midiToFrequency(60 + midi)
-      if (!isNaN(freq)) {
-        this.sound.triggerAttackRelease(freq, this.sequence.subdivision)
-      }
-    }, ['0'])
-    this.sequence.loop = true
+    this.create()
   },
   data () {
     return {
-      tempo: 120
+      volume: 0.2,
+      active: false
     }
   },
   computed: {
-    ...setComputed('mel,rythme,scale'.split(',')),
+    style () {
+      return {
+        backgroundColor: this.active ? 'red' : 'blue'
+      }
+    },
     state () {
       return this.sequence.state
-    }
+    },
+    ...setComputed('mel,rythme,scale'.split(','))
   },
   methods: {
-    setTempo (v) {
-      Tone.Transport.bpm.value = this.tempo
-      console.log(Tone.Transport.bpm)
+    create () {
+      this.sound = new Tone.AMSynth().toMaster()
+      this.sequence = new Tone.Sequence((t, v) => {
+        v = parseInt(v)
+        var scale = this.scale.split(',')
+        var note = v % (scale.length - 1)
+        var octave = Math.floor(v / (scale.length - 1))
+        var midi = parseInt(scale[note]) + scale[scale.length - 1] * octave
+        var freq = Tone.Frequency().midiToFrequency(60 + midi)
+        if (!isNaN(freq)) {
+          this.sound.triggerAttackRelease(freq, this.sequence.subdivision)
+        }
+      }, this.mel.split(','), '4n')
+      this.sequence.loop = true
+    },
+    setGain (v) {
+      this.sound.volume.value = this.volume
     },
     setSequence () {
       this.sequence.removeAll()
       var mel = createMel(this.mel.split(','), this.rythme.split(','))
-      console.log(mel)
+      // console.log(mel)
       this.sequence.at(0, mel)
-                 // console.log(this.sequence.at(0))
-      // for (var i = 0; i < mel.length; i++) {
-      // }
+    },
+    stop () {
+      this.sound.triggerRelease()
+      this.sequence.stop()
+      this.active = false
     },
     generate () {
       if (this.sequence.state === 'started') {
-        this.sound.triggerRelease()
-        this.sequence.stop()
+        this.stop()
       } else {
-        this.sequence.start()
+        if (Tone.Transport.state === 'stopped') {
+          Tone.Transport.start()
+          this.sequence.start()
+        } else {
+                    // this.sequence.start()
+          this.sequence.start('@1m')
+        }
+        this.active = true
       }
     }
   }

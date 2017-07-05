@@ -4,7 +4,7 @@ export default {
 		return {
 			mel: '0,1',
 			rythme: '2,2',
-			scale: '0,2,4,7,9'
+			scale: '0,2,4,7,9,12'
 		}
 	},
 	// getters: {
