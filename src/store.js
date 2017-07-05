@@ -2,8 +2,8 @@ export default {
 	namespaced: true,
 	state () {
 		return {
-			mel: '',
-			rythme: '',
+			mel: '0,1',
+			rythme: '2,2',
 			scale: ''
 		}
 	},
