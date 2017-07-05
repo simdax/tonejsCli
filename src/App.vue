@@ -1,8 +1,8 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
-    <router-view ns="bob"></router-view>
-    <router-view ns="bib"></router-view>
+    <container ref="generator"></container>
+    <button id="addCell" @click="$refs.generator.add()">add cell</button>
     <div id="settings">
       <input type="range" max="200" min="1" v-model='tempo' @input="setTempo">
       <button @click="toggle"> stop </button>
@@ -11,16 +11,34 @@
   </div>
 </template>
 
+<style>
+  #addCell{
+    position: fixed;
+    left: 0;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: tomato
+  }
+</style>
+
 <script>
 
 import Tone from 'tone'
+import container from './container.vue'
 global.t = Tone
 
 export default {
+  components: {container},
   name: 'app',
   data () {
     return {
       tempo: 100
+    }
+  },
+  computed: {
+    children () {
+      return this.$refs.generator.$children
     }
   },
   methods: {
@@ -28,23 +46,23 @@ export default {
       Tone.Transport.bpm.value = this.tempo
     },
     stop () {
-      for (var i = 0; i < this.$children.length; i++) {
-        var child = this.$children[i]
+      for (var i = 0; i < this.children.length; i++) {
+        var child = this.children[i]
         child.stop()
       }
+      Tone.Transport.stop()
     },
     all () {
-      for (var i = 0; i < this.$children.length; i++) {
-        var child = this.$children[i]
+      for (var i = 0; i < this.children.length; i++) {
+        var child = this.children[i]
         child.play()
       }
     },
     toggle () {
       // toggles all if one is stopped, else stop all
-      var children = this.$children
       loop: {
-        for (var i = 0; i < children.length; i++) {
-          var child = children[i]
+        for (var i = 0; i < this.children.length; i++) {
+          var child = this.children[i]
           if (child.sequence.state === 'stopped') {
             this.all()
             break loop
@@ -55,11 +73,11 @@ export default {
     },
     panic () {
       this.stop()
-      var children = this.$children
       Tone.context.close()
       Tone.context = new AudioContext()
-      for (var i = 0; i < children.length; i++) {
-        var child = children[i]
+      Tone.Transport.stop()
+      for (var i = 0; i < this.children.length; i++) {
+        var child = this.children[i]
         child.create()
       }
     }

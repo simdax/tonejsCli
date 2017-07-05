@@ -1,12 +1,13 @@
 <template>
   <div class="hello">
+    <div class="close" @click="$emit('kill',ns)">X</div>
     <in v-model='mel' :placeholder="mel" >mel</in>
     <in v-model='rythme' :placeholder="rythme">rythme</in>
     <in v-model='scale' :placeholder="scale">scale</in>
     <div>      
       timber
       <select v-model="timber" name="" id="" @change="setTimber">
-        <option v-for="n in ['AMSynth','PluckSynth']" :value="n" >{{n}}</option>
+        <option v-for="n in ['AMSynth', 'FMSynth', 'DuoSynth','PluckSynth', 'MembraneSynth', 'MetalSynth']" :value="n" >{{n}}</option>
       </select>
     </div>
     <div>      
@@ -51,7 +52,6 @@ export default {
   },
   methods: {
     setTimber () {
-      console.log(this.timber)
       // kill old one ?
       this.sound = new Tone[this.timber]().toMaster()
     },
@@ -107,6 +107,9 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
+.close{
+
+}
 .hello{
   display: flex;
   flex-flow: column;
