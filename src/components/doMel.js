@@ -1,4 +1,13 @@
+import Tone from 'tone'
 
+export function playNote (v) {
+  v = parseInt(v)
+  var scale = this.scale.split(',')
+  var note = v % (scale.length - 1)
+  var octave = Math.floor(v / (scale.length - 1))
+  var midi = parseInt(scale[note]) + scale[scale.length - 1] * octave
+  return Tone.Frequency().midiToFrequency(60 + midi)
+}
 // helper for
 
 let setRythmes = (r) => {

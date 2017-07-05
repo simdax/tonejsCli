@@ -35,7 +35,7 @@
 				// on incremente le dernier
 				var i = this.components[this.components.length - 1]
 				this.components.push(i + 1)
-				console.log(i + 1)
+				// console.log(i + 1)
 			},
 			kill (e) {
 				this.$store.unregisterModule(String(e))

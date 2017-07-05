@@ -23,7 +23,7 @@
 import Tone from 'tone'
 import store from '../store'
 import input from './input.vue'
-import {createMel, setComputed} from './doMel'
+import {createMel, setComputed, playNote} from './doMel'
 
 export default {
   props: ['ns'],
@@ -51,28 +51,33 @@ export default {
     ...setComputed('mel,rythme,scale'.split(','))
   },
   methods: {
+    create () {
+      this.setTimber()
+      this.sequence = new Tone.Sequence((t, v) => {
+        if (isNaN(parseInt(v))) {
+          // means chord
+          var chord = [0, 2, 4].map((vv) => {
+            var freq = vv + 'c,d,e,f,g,a,b'.split(',').indexOf(v)
+            return playNote.bind(this)(freq)
+          })
+          this.sound.triggerAttackRelease(chord, this.sequence.subdivision)
+        } else {
+          var freq = playNote.bind(this)(v)
+          if (!isNaN(freq)) {
+            this.sound.triggerAttackRelease(freq, this.sequence.subdivision)
+          }
+        }
+      }, [this.mel.split(',')], '4n')
+      this.sequence.loop = true
+    },
     kill () {
       this.stop()
       this.$emit('kill', this.ns)
     },
     setTimber () {
       // kill old one ?
-      this.sound = new Tone[this.timber]().toMaster()
-    },
-    create () {
-      this.sound = new Tone[this.timber]().toMaster()
-      this.sequence = new Tone.Sequence((t, v) => {
-        v = parseInt(v)
-        var scale = this.scale.split(',')
-        var note = v % (scale.length - 1)
-        var octave = Math.floor(v / (scale.length - 1))
-        var midi = parseInt(scale[note]) + scale[scale.length - 1] * octave
-        var freq = Tone.Frequency().midiToFrequency(60 + midi)
-        if (!isNaN(freq)) {
-          this.sound.triggerAttackRelease(freq, this.sequence.subdivision)
-        }
-      }, [this.mel.split(',')], '4n')
-      this.sequence.loop = true
+      // this.sound = new Tone[this.timber]().toMaster()
+      this.sound = new Tone.PolySynth(4, Tone[this.timber]).toMaster()
     },
     setGain (v) {
       this.sound.volume.value = this.volume
