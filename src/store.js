@@ -2,17 +2,25 @@ export default {
 	namespaced: true,
 	state () {
 		return {
-			code: '0,1,2,3,4,5,1'
+			mel: '',
+			rythme: '',
+			scale: ''
 		}
 	},
-	getters: {
-		code: s => {
-			return s.code
-		}
-	},
+	// getters: {
+	// 	code: s => {
+	// 		return s.code
+	// 	}
+	// },
 	mutations: {
-		SET_CODE (s, val) {
-			s.code = val
+		SET_MEL (s, val) {
+			s.mel = val
+		},
+		SET_RYTHME (s, val) {
+			s.rythme = val
+		},
+		SET_SCALE (s, val) {
+			s.scale = val
 		}
 	}
 }

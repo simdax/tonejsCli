@@ -11,7 +11,6 @@ Vue.use(VueX)
 const store = new VueX.Store({
 	actions: {
 		setCode ({commit}, val, ns) {
-			console.log(val, ns)
 			commit(ns + '/SET_CODE', val)
 		}
 	}

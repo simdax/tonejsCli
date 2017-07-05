@@ -1,6 +1,8 @@
 <template>
   <div class="hello">
-    <input v-model="code"/>
+    <in v-model='mel'></in>
+    <in v-model='rythme'></in>
+    <in v-model='scale'></in>
     <button @click="generate"> generate </button>
   </div>
 </template>
@@ -11,26 +13,36 @@ import Tone from 'tone'
 // import {mapActions} from 'vuex'
 import store from '../store'
 Tone.Transport.start()
+import input from './input.vue'
+
+let setComputed = (names) => {
+  var result = {}
+  for (var i = 0; i < names.length; i++) {
+    var name = names[i]
+    !(function (name) {
+          result[name] = {
+            get () {
+              return this.$store.state[this.ns][name]
+            },
+            set (value) {
+              return this.$store.commit(this.ns + '/SET_' + name.toUpperCase(), value)
+            }
+          }
+        }(name))
+  }
+  console.log(result)
+  return result
+}
 
 export default {
   props: ['ns'],
+  components: {in: input},
   created () {
     this.$store.registerModule(this.ns, store)
     this.sound = new Tone.AMSynth().toMaster()
   },
-  computed: {
-    // ...mapGetters(['code'])
-    code: {
-      get () {
-        return this.$store.state[this.ns].code
-      },
-      set (value) {
-        return this.$store.commit(this.ns + '/SET_CODE', value)
-      }
-    }
-  },
+  computed: setComputed('mel,rythme,scale'.split(',')),
   methods: {
-    // ...mapActions(['setCode']),
     generate () {
       var sequence = new Tone.Sequence((t, v) => {
         var freq = Tone.Frequency().midiToFrequency(60 + parseInt(v))
