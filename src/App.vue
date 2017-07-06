@@ -32,7 +32,7 @@ export default {
   name: 'app',
   data () {
     return {
-      tempo: 100
+      tempo: 10
     }
   },
   computed: {
@@ -87,10 +87,11 @@ export default {
 <style>
   #settings{
      background: url(./assets/logo.png);
-     /*position: fixed;*/
+     /*position: absolute;*/
      top: 0;
-     height: 100px;
-     width: 100%;
+     height: 150px;
+     width: 50%;
+     margin: auto;
   }
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
@@ -98,6 +99,5 @@ export default {
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #2c3e50;
-    margin-top: 60px;
   }
 </style>

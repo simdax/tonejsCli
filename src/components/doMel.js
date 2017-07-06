@@ -1,3 +1,5 @@
+// kind of helpers
+
 import Tone from 'tone'
 
 export function playNote (v) {

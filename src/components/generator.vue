@@ -54,14 +54,18 @@ export default {
     create () {
       this.setTimber()
       this.sequence = new Tone.Sequence((t, v) => {
+        if (v === ',') { return }
+        console.log(this.sequence.subdivision)
         if (isNaN(parseInt(v))) {
           // means chord
           var chord = [0, 2, 4].map((vv) => {
             var freq = vv + 'c,d,e,f,g,a,b'.split(',').indexOf(v)
             return playNote.bind(this)(freq)
           })
+          console.log(chord)
           this.sound.triggerAttackRelease(chord, this.sequence.subdivision)
         } else {
+          console.log('single note')
           var freq = playNote.bind(this)(v)
           if (!isNaN(freq)) {
             this.sound.triggerAttackRelease(freq, this.sequence.subdivision)
@@ -76,8 +80,8 @@ export default {
     },
     setTimber () {
       // kill old one ?
-      // this.sound = new Tone[this.timber]().toMaster()
-      this.sound = new Tone.PolySynth(4, Tone[this.timber]).toMaster()
+      this.sound = new Tone[this.timber]().toMaster()
+      // this.sound = new Tone.PolySynth(4, Tone[this.timber]).toMaster()
     },
     setGain (v) {
       this.sound.volume.value = this.volume
