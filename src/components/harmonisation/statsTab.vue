@@ -4,7 +4,7 @@
 					<tr>
 						<th> <slot></slot> </th>
 						<td v-for="n in mel"> {{ n }} </td>
-						<td class='result'> result </td>
+						<td class='result'> fit </td>
 					</tr>
 				</thead>
 				<tbody>
@@ -25,10 +25,12 @@
 	table{
 		table-layout: fixed;
 	}
+	td,th {
+		width: 6%;
+	}
 	td{
 		text-align: center;
 		font-size: 1.5em;
-		width: 6%;
 		background-color: #ddd
 	}
 	.result{
@@ -41,9 +43,6 @@
 
 	export default {
 		props: ['grille', 'mel'],
-		created () {
-			this.createTab()
-		},
 		computed: {
 			grilles () {
 				var res = []

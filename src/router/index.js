@@ -5,7 +5,9 @@ import App from '@/App'
 import timbre from '@/components/timbre/main'
 import filter from '@/components/timbre/freeverb'
 import harmonisation from '@/components/harmonisation/main'
+
 import stat from '@/components/harmonisation/statistics.vue'
+import routerStats from '../components/harmonisation/router'
 
 Vue.use(Router)
 
@@ -31,7 +33,10 @@ export default new Router({
     },
     {
       path: '/stat',
-      component: stat
+      component: stat,
+      children: [
+        routerStats
+      ]
     },
     {
       path: '*',
