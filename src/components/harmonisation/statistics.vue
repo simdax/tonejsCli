@@ -1,102 +1,85 @@
 <template>	
-	<div>
-		<div id="table">
-			<table>
-				<thead>
-					<tr>
-						<th> grille d'accord \ mel </th>
-						<td v-for="n in mel"> {{ n }} </td>
-						<td> result </td>
-					</tr>
-				</thead>
-				<tbody>
-					<tr v-for='(grille,indexGrille) in grilles'>
-						<!-- we have to low down -->
-						<th>{{ grille }}</th>
-						<td v-for='(note,indexNote) in mel' 
-						:style='{ color : isVector(grille, indexGrille, note, indexNote) ? "blue" : "red" }'>
-						{{ distance(grille, note, indexNote) }}
-					</td>
-					<td>{{ Math.round(results[indexGrille] / 2) }}</td>
-				</tr>
-			</tbody>
-		</table>
+<div>
+	<div id="inputs">		
+		<input type="telefon" v-model='grille'>
+		<input type="telefon" v-model='mel'>
 	</div>
-	<!-- <input type="number" v-model.number='nb'> -->
-	<input type="telefon" v-model='grille'>
-	<input type="telefon" v-model='mel'>
+	<div id="stats">
+		<stats :grille="grille" :mel="mel">grille d'accord \ mel</stats>
+		<stats :grille="grille | inverse" :mel="mel">grille inversée</stats>
+		<stats :grille="grille" :mel="mel | inverse">mel inversée</stats>
+		<stats :grille="grille | renverse" :mel="mel">grille renversée</stats>
+		<stats :grille="grille" :mel="mel | renverse">mel renversée</stats>
+		<stats :grille="grille | inverse | renverse" :mel="mel">grille renversée et inversée</stats>
+		<stats :grille="grille" :mel="mel | inverse | renverse">mel renversée et inversée</stats>
+	</div>
 </div>
 </template>
 
 <style>
-	table{
-		table-layout: fixed;
+	
+	body{
+		font-size: 0.5rem
 	}
-	td{
-		text-align: center;
-		width: 6%
+	#inputs{
+		display: flex;
+		justify-content: center;
+		margin: 5px
 	}
+	#stats{
+		display: flex;
+		flex-flow: row wrap;
+	}
+	#stats *{
+		width: 49%;
+		border: 1px solid; 
+	}
+	#stats > *{
+		height: 150px;
+	}
+
 </style>
 
 <script>
 
+import stats from './statsTab.vue'
+
 	export default {
+		components: {stats},
 		data () {
 			return {
-				nb: 12,
 				mel: '0123456',
-				grille: '0514',
-				results: []
+				grille: '0514'
 			}
 		},
-		watch: {
-			mel () { this.results = [] },
-			grille () { this.results = [] }
-		},
-		computed: {
-			grilles () {
-				var res = []
-				for (var i = 0; i < this.grille.length; i++) {
-					res.push(this.move(i))
-				}
-				return res
-			}
-		},
-		methods: {
-			move (n) {
-				var dep = this.grille.split('').map(v => { return parseInt(v) })
-				var res = []
-				for (var i = 0; i < dep.length; i++) {
-					res.push(dep[(i + n) % dep.length])
+		filters: {
+			inverse (grille) {
+				var res = ''
+				for (var i = grille.length - 1; i >= 0; i--) {
+					res += grille[i]
 				}
 				return res
 			},
-			getResults () {
-				// clear results
-				this.results.splice(0)
-				for (var i = 0; i < this.grille.length; i++) {
-					var tds = document.querySelectorAll('tbody tr:nth-child(' + (i + 1) + ') td')
-					var res = 0
-					for (var j = 0; j < tds.length; j++) {
-						if (tds[j].style.color === 'blue') {
-							res++
-						}
+			renverse (grille) {
+				var intervalles = [parseInt(grille[0])]
+				for (var i = 1; i < grille.length; i++) {
+					var lettre = parseInt(grille[i])
+					var lettreAvant = parseInt(grille[i - 1])
+					intervalles.push(lettre - lettreAvant)
+				}
+				var res = intervalles.reduce((a, b) => {
+					var note = 0
+					if (!Array.isArray(a)) {
+						note = a - b
+						if (note < 0) { note += 7 }
+					  return [a].concat(note)
+					}	else {
+						note = a[a.length - 1] - b
+						if (note < 0) { note += 7 }
+						return a.concat(note)
 					}
-					this.results.push(res)
-				}
-			},
-			distance (grille, note, indexNote) {
-				// distance entre basse et melodie
-				var	dist = (note % 7) - grille[indexNote % this.grille.length]
-				// convertie en intervalle 0 <-> 6
-				return Math.sign(dist) === -1 ? (dist + 7) : dist
-			},
-			isVector (grille, indexGrille, note, indexNote) {
-				var n = this.distance(grille, note, indexNote)
-				var res = (n === 0 || n === 2 || n === 4)
-				if (!this.results[indexGrille]) { this.results.push(0) }
-				this.results[indexGrille] += (res ? 1 : 0)
-				return res
+				})
+				return res.join().replace(/,/g, '')
 			}
 		}
 	}
