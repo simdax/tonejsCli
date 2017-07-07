@@ -18,7 +18,7 @@ upper = \relative c'' {
   \key c \major
   \time 4/4
 
-  \basse
+  \basseAccords
 }
 
 lower = \relative c {
@@ -26,17 +26,26 @@ lower = \relative c {
   \key c \major
   \time 4/4
 
-  a2 c
+  \basse
 }
 
 \score {
   <<
-    \new Voice = "mel" { \autoBeamOff \melody }
-    \new Lyrics \lyricsto mel \text
-    \new PianoStaff <<
-      \new Staff = "upper" \upper
-      \new Staff = "lower" \lower
-    >>
+   \new ChordNames {
+    \set chordChanges = ##t
+    \basse
+  }
+  \new Voice = "mel" \with { 
+    \remove "Note_heads_engraver"
+    \consists "Completion_heads_engraver"
+    \remove "Rest_engraver"
+    \consists "Completion_rest_engraver"
+  }  \melody
+  \new Lyrics \lyricsto mel \text
+  \new PianoStaff <<
+  \new Staff = "upper" \upper
+  \new Staff = "lower" \lower
+  >>
   >>
   \layout {
     \context { \Staff \RemoveEmptyStaves }

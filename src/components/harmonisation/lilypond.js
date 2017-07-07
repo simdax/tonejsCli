@@ -12,7 +12,10 @@ function notation (mel, rythme, resolution) {
 	var rules = [`${note}16`, `${note}8`, `${note}8.`,
 							`${note}4`, `${note}4~${note}16`, `${note}4.`, `${note}4..`,
 							`${note}2`, `${note}2 ~ ${note}16`]
-	return rules[parseInt(rythme)]
+	var index = parseInt(rythme) - 1
+	var res = rules[index]
+	console.log(index, res)
+	return res
 }
 
 export default function convert2ly (mel, rythme, resolution) {

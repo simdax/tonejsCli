@@ -122,7 +122,6 @@
 				axios.post('/lilypond', {
 					mel, basse
 				}).then(response => {
-					console.log(response)
 					this.createSVG(response.data)
 				})
 			},
