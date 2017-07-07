@@ -20,3 +20,14 @@ export function	findPath (all) {
 				}
 				return path
 			}
+
+export function format (note) {
+				return (Math.sign(note) === -1 ? (note + 7) : note) % 7
+			}
+
+export function formatString (string) {
+				var array = string.split('')
+				var res = array.map(v => { return format(parseInt(v)) })
+				res = res.join().replace(/,/g, '')
+				return res
+			}

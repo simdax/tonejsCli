@@ -3,8 +3,8 @@
 	<div id="inputs">		
 		<input type="telefon" v-model='grille'>
 		<input type="telefon" v-model='mel'>
-		<input type="number" v-model.number='melTranspose'>
-		<input type="number" v-model.number='grilleTranspose'>
+		<input type="number" min="0" max="6" v-model.number='melTranspose'>
+		<input type="number" min="0" max="6" v-model.number='grilleTranspose'>
 		<label >
 			inverse grille
 			<input type="checkbox" v-model='grilleInverseBool'>
@@ -32,7 +32,12 @@
 </template>
 
 <style>
-	
+	.settings{
+		display: flex;
+		justify-content: center;
+		margin: 5px
+	}
+
 	#inputs{
 		display: flex;
 		justify-content: center;
@@ -54,8 +59,9 @@
 
 <script>
 
+	import {format} from './utils'
+
 	export default {
-		// components: {stats},
 		data () {
 			return {
 				melTranspose: 0,
@@ -70,7 +76,10 @@
 		},
 		filters: {
 			add (grille, n) {
-				return grille.split('').map(v => { return parseInt(v) + n }).join().replace(/,/g, '')
+				var res = grille.split('').map(v => { return parseInt(v) + n })
+				res = res.map(v => { return format(v) })
+				return res.join().replace(/,/g, '')
+				// return formatString(res)
 			},
 			inverse (grille, bool) {
 				if (bool) {
@@ -103,7 +112,9 @@
 							return a.concat(note)
 						}
 					})
-					return res.join().replace(/,/g, '')
+					if (res.length > 0) {
+						return res.join().replace(/,/g, '')
+					}
 				} else {
 					return grille
 				}
