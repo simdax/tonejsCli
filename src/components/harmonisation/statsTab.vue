@@ -10,10 +10,9 @@
 			</thead>
 			<tbody>
 				<tr v-for='(grille,indexGrille) in grilles'>
-					<!-- we have to low down -->
 					<th>{{ grille }}</th>
 					<td v-for='(note,indexNote) in mel' 
-					:style='{ color : vectors[indexGrille][indexNote] ? "blue" : "red" }'>
+					:style='{ backgroundColor : vectors[indexGrille][indexNote] ? "blue" : "red" }'>
 					{{ tabs[indexGrille][indexNote] }}
 				</td>
 				<td class="result">{{ results[indexGrille] }} % </td>
