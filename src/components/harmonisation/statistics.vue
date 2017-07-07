@@ -5,7 +5,6 @@
 			<input type="telefon" v-model='grille'>
 			<button @click="swap">swap</button>
 			<input type="telefon" v-model='mel'>
-			<input type="number" min="0" max="6" v-model.number='melTranspose'>
 		</div>
 		<div id="rythmes">				
 			<input type="text" v-model="rythmeGrille">
@@ -33,18 +32,28 @@
 	</div>
 	<div id="stats">
 		<router-view 
+			class='io'
+			v-for = 'n in 6' :key=" n + 'stats_' "
+			:transpose='n'
 			:grille="grille | rythme(rythmeGrille) | reverse(grilleReverseBool) | inverse(grilleInverseBool) "
-			:mel= "mel | rythme(rythmeMel) | until(duration) | reverse(melReverseBool) | inverse(melInverseBool) | add(melTranspose)"
+			:mel= "mel | rythme(rythmeMel) | until(duration) | reverse(melReverseBool) | inverse(melInverseBool) | add(n-1)"
+			@select = "print($event)"
 		><sub>harmo</sub>\<sup>mel</sup></router-view>
 	</div> 
+	<div id="fou"></div>
 </div>
 </template>
 
 <style>
-
+/*
 *{
 	margin: 1px 5px;
 	padding: 1px 5px;
+}
+*/
+.io{
+	width: 30%;
+	/*height: 20%;*/
 }
 	.settings{
 		display: flex;
@@ -83,15 +92,16 @@
 
 <script>
 
-	import {format} from './utils'
+	import axios from 'axios'
+	import {rotate, add} from './utils'
+	import convert2ly from './lilypond'
 
 	export default {
 		data () {
 			return {
 				duration: 16,
-				rythmeMel: '1111',
-				rythmeGrille: '1111',
-				melTranspose: 0,
+				rythmeMel: '211',
+				rythmeGrille: '4',
 				melInverseBool: false,
 				melReverseBool: false,
 				grilleInverseBool: false,
@@ -101,6 +111,25 @@
 			}
 		},
 		methods: {
+			print ({indexGrille, transpose}) {
+				var grille = rotate(this.grille, indexGrille)
+				var mel = add(this.mel, transpose)
+				mel = convert2ly(mel, this.rythmeMel, this.duration)
+				grille = convert2ly(grille, this.rythmeGrille, this.duration)
+				this.getLilypond(mel, grille)
+			},
+			getLilypond (mel, basse) {
+				axios.post('/lilypond', {
+					mel, basse
+				}).then(response => {
+					console.log(response)
+					this.createSVG(response.data)
+				})
+			},
+			createSVG (string) {
+				var div = document.querySelector('#fou')
+				div.innerHTML = string
+			},
 			swap () {
 				var tmp = this.grille
 				this.grille = this.mel
@@ -108,6 +137,7 @@
 			}
 		},
 		filters: {
+			add,
 			until (grille, dur) {
 				var res = ''
 				for (var i = 0; i < dur; i++) {
@@ -124,11 +154,6 @@
 					}
 				}
 				return res
-			},
-			add (grille, n) {
-				var res = grille.split('').map(v => { return parseInt(v) + n })
-				res = res.map(v => { return format(v) })
-				return res.join().replace(/,/g, '')
 			},
 			inverse (grille, bool) {
 				if (bool) {

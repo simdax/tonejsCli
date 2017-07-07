@@ -9,7 +9,7 @@
 				</tr>
 			</thead>
 			<tbody>
-				<tr v-for='(grille,indexGrille) in grilles'>
+				<tr v-for='(grille,indexGrille) in grilles' @click='$emit("select", {indexGrille, transpose})'>
 					<th>{{ grille }}</th>
 					<td v-for='(note,indexNote) in mel' 
 					:style='{ backgroundColor : vectors[indexGrille][indexNote] ? "blue" : "red" }'>
@@ -29,6 +29,15 @@
 	}
 	td,th {
 		width: 6%;
+		height: 1px;
+		color: transparent;
+	}
+	th{
+		display: none
+	}
+	tbody tr:hover td{
+		cursor: pointer;
+		color: yellow
 	}
 	td{
 		text-align: center;
@@ -43,16 +52,16 @@
 
 <script>
 
-	import {format, formatString} from './utils'
+	import {format, formatString, rotate} from './utils'
 
 	export default {
-		props: ['grille', 'mel'],
+		props: ['grille', 'mel', 'transpose'],
 		computed: {
 			grilles () {
 				var res = []
 				var grille = formatString(this.grille)
 				for (var i = 0; i < grille.length; i++) {
-					res.push(this.move(grille, i))
+					res.push(rotate(grille, i))
 				}
 				return res
 			},
@@ -96,14 +105,6 @@
 		},
 		methods: {
 			formatString,
-			move (grille, n) {
-				var dep = grille.split('').map(v => { return parseInt(v) })
-				var res = []
-				for (var i = 0; i < dep.length; i++) {
-					res.push(dep[(i + n) % dep.length])
-				}
-				return res
-			},
 			isVector (indexGrille, indexNote) {
 				var n = this.tabs[indexGrille][indexNote]
 				var res = (n === 0 || n === 2 || n === 4)

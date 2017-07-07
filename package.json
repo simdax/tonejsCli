@@ -5,7 +5,7 @@
   "author": "simdax <simoncornaz@gmail.com>",
   "private": true,
   "scripts": {
-    "dev": "node build/dev-server.js",
+    "dev": "nodemon build/dev-server.js",
     "start": "node build/dev-server.js",
     "build": "node build/build.js",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
@@ -15,6 +15,8 @@
   },
   "dependencies": {
     "animate.css": "^3.5.2",
+    "axios": "^0.16.2",
+    "body-parser": "^1.17.2",
     "d3": "^4.9.1",
     "node-sass": "^4.5.3",
     "sass-loader": "^6.0.6",

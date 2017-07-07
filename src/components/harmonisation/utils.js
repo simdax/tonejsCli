@@ -31,3 +31,19 @@ export function formatString (string) {
 				res = res.join().replace(/,/g, '')
 				return res
 			}
+
+export 	function rotate (array, n) {
+				var dep = array.split('').map(v => { return parseInt(v) })
+				var res = []
+				for (var i = 0; i < dep.length; i++) {
+					res.push(dep[(i + n) % dep.length])
+				}
+				return res
+			}
+
+export function add (grille, n) {
+	var res = grille.split('').map(v => { return parseInt(v) + n })
+	res = res.map(v => { return format(v) })
+	return res.join().replace(/,/g, '')
+}
+

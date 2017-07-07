@@ -41,6 +41,13 @@ compiler.plugin('compilation', function (compilation) {
   })
 })
 
+// my routes
+var bodyParser = require('body-parser')
+app.use(bodyParser.urlencoded({extended: true}))
+app.use(bodyParser.json())
+app.use(require('./routes'))
+
+
 // proxy api requests
 Object.keys(proxyTable).forEach(function (context) {
   var options = proxyTable[context]
@@ -89,3 +96,4 @@ module.exports = {
     server.close()
   }
 }
+
