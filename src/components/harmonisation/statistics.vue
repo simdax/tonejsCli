@@ -2,9 +2,9 @@
 <div>
 	<div id="inputs">		
 		<input type="telefon" v-model='grille'>
+		<button @click="swap">swap</button>
 		<input type="telefon" v-model='mel'>
 		<input type="number" min="0" max="6" v-model.number='melTranspose'>
-		<input type="number" min="0" max="6" v-model.number='grilleTranspose'>
 		<label >
 			inverse grille
 			<input type="checkbox" v-model='grilleInverseBool'>
@@ -24,8 +24,8 @@
 	</div>
 	<div id="stats">
 		<router-view 
-			:grille="grille | inverse(grilleInverseBool) | reverse(grilleReverseBool) | add(grilleTranspose)"
-			:mel= "mel | inverse(melInverseBool) | reverse(melReverseBool) | add(melTranspose)"
+			:grille="grille | reverse(grilleReverseBool) | inverse(grilleInverseBool) "
+			:mel= "mel | reverse(melReverseBool) | inverse(melInverseBool) | add(melTranspose)"
 		></router-view>
 	</div> 
 </div>
@@ -65,7 +65,6 @@
 		data () {
 			return {
 				melTranspose: 0,
-				grilleTranspose: 0,
 				melInverseBool: false,
 				melReverseBool: false,
 				grilleInverseBool: false,
@@ -74,12 +73,18 @@
 				grille: '0514'
 			}
 		},
+		methods: {
+			swap () {
+				var tmp = this.grille
+				this.grille = this.mel
+				this.mel = tmp
+			}
+		},
 		filters: {
 			add (grille, n) {
 				var res = grille.split('').map(v => { return parseInt(v) + n })
 				res = res.map(v => { return format(v) })
 				return res.join().replace(/,/g, '')
-				// return formatString(res)
 			},
 			inverse (grille, bool) {
 				if (bool) {

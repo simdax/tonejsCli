@@ -60,7 +60,6 @@
 			tabs () {
 				var res = []
 				var mel = formatString(this.mel)
-				console.log(mel)
 				for (var i = 0; i < this.grilles.length; i++) {
 					res.push([])
 					for (var j = 0; j < mel.length; j++) {
