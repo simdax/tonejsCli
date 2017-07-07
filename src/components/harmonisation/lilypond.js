@@ -14,7 +14,7 @@ function notation (mel, rythme, resolution) {
 							`${note}2`, `${note}2 ~ ${note}16`]
 	var index = parseInt(rythme) - 1
 	var res = rules[index]
-	console.log(index, res)
+	// console.log(index, res)
 	return res
 }
 

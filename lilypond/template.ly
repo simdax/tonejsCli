@@ -1,6 +1,5 @@
 \include "./includes.ly"
 
-
 melody = \relative c'' {
   \clef treble
   \key c \major

@@ -40,21 +40,21 @@
 			@select = "print($event)"
 		><sub>harmo</sub>\<sup>mel</sup></router-view>
 	</div> 
+	<midiButton></midiButton>
 	<div id="fou"></div>
 </div>
 </template>
 
 <style>
-/*
-*{
-	margin: 1px 5px;
-	padding: 1px 5px;
-}
-*/
-.io{
-	width: 30%;
-	/*height: 20%;*/
-}
+
+	.io{
+		width: 30%;
+		/*height: 20%;*/
+	}
+	#fou{
+		height: 100px;
+		overflow: scroll;
+	}
 	.settings{
 		display: flex;
 		justify-content: center;
@@ -95,8 +95,10 @@
 	import axios from 'axios'
 	import {rotate, add} from './utils'
 	import convert2ly from './lilypond'
+	import midiButton from './midiButton.vue'
 
 	export default {
+		components: {midiButton},
 		data () {
 			return {
 				duration: 16,

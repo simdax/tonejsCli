@@ -2,6 +2,7 @@ const routes = require('express').Router()
 
 var child_process = require('child_process')
 var fs = require('fs')
+var MidiConvert = require('midiconvert')
 
 // const lilypond = require ('../lilypond') 
 
@@ -26,6 +27,16 @@ routes.post('/lilypond', function(req, res, next){
 				})
 			}
 		})
+	})
+})
+
+routes.get('/lilypond/midi', function (req, res, next) {
+	fs.readFile("lilypond/tmp.midi", "binary", function(err, midiBlob) {
+	  if (!err) {
+	    var midi = MidiConvert.parse(midiBlob)
+			// console.log("io", midi)
+	    res.send(midi)
+	  }
 	})
 })
 

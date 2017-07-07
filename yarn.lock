@@ -4045,6 +4045,10 @@ micromatch@^2.1.5, micromatch@^2.3.11:
     parse-glob "^3.0.4"
     regex-cache "^0.4.2"
 
+midiconvert@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/midiconvert/-/midiconvert-0.4.1.tgz#0e24f0aee645ee49901a3505beb810bbea038e09"
+
 miller-rabin@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/miller-rabin/-/miller-rabin-4.0.0.tgz#4a62fb1d42933c05583982f4c716f6fb9e6c6d3d"
