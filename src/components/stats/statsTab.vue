@@ -1,47 +1,58 @@
 <template>
 <div>
-		<table>
-			<thead>
-				<tr>
-					<th> <slot></slot> </th>
-					<td v-for="n in formatString(mel)"> {{ n }} </td>
-					<td class='result'> fit </td>
-				</tr>
-			</thead>
-			<tbody>
-				<tr v-for='(grille,indexGrille) in grilles' @click='$emit("select", {indexGrille, transpose})'>
-					<th>{{ grille }}</th>
-					<td v-for='(note,indexNote) in mel' 
+	<div class="table">
+		<div class="thead tr">
+			<div class="tr">
+				<div class="th"> <slot></slot> </div>
+				<div class="td" v-for="n in formatString(mel)"> {{ n }} </div>
+				<div class='td result'> fit </div>
+			</div>
+		</div>
+		<div class='tbody'>
+				<div class="tr" v-for='(grille,indexGrille) in grilles' @click='$emit("select", {indexGrille, transpose})'>
+					<div class="th">{{ grille }}</div>
+					<div class ="td" v-for='(note,indexNote) in mel' 
 					:style='{ backgroundColor : vectors[indexGrille][indexNote] ? "blue" : "red" }'>
 					{{ tabs[indexGrille][indexNote] }}
-				</td>
-				<td class="result">{{ results[indexGrille] }} % </td>
-			</tr>
-		</tbody>
-	</table>
+				</div>
+				<div class="td result">{{ results[indexGrille] }} % </div>
+			</div>
+		</div>
+	</div>
 	{{total}}
 </div>
 </template>
 
 <style>
-	table{
-		table-layout: fixed;
+	.table{
+		/*table-layout: fixed;*/
+		display: flex;
+		flex-flow: column;
+		font-size: 0.1em;
 	}
-	td,th {
-		width: 6%;
-		height: 1px;
+	.tr{
+		width: 100%;
+		display: flex;
+	}
+	.thead{
+		height: 2%;
+		width: 100%;
+		font-weight: bold;
+	}
+	.tbody .th{
 		color: transparent;
 	}
-	th{
-		display: none
+	.td,.th {
+		width: 6%;
+		height: 10px;
 	}
-	tbody tr:hover td{
+	.tbody .tr:hover .td{
 		cursor: pointer;
 		color: yellow
 	}
-	td{
+	.td{
 		text-align: center;
-		font-size: 1.5em;
+		/*font-size: 1.5em;*/
 		background-color: #ddd
 	}
 	.result{

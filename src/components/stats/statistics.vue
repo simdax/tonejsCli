@@ -1,18 +1,21 @@
 <template>	
 <div>
-	<div class="inputs">		
-		<div>			
-			<input type="telefon" v-model='grille'>
-			<button @click="swap">swap</button>
-			<input type="telefon" v-model='mel'>
-		</div>
-		<div id="rythmes">				
-			<input type="text" v-model="rythmeGrille">
-			<input type="text" v-model="rythmeMel">
-			<input type="number" v-model.number="duration">
-		</div>
-	</div>	
+	<header>
+		<div class="inputs">		
+			<div>			
+				<input type="telefon" v-model='grille'>
+				<button @click="swap">swap</button>
+				<input type="telefon" v-model='mel'>
+			</div>
+			<div id="rythmes">				
+				<input type="text" v-model="rythmeGrille">
+				<input type="text" v-model="rythmeMel">
+				<input type="number" v-model.number="duration">
+			</div>
+		</div>	
+	</header>
 		<div class="inversions">
+			<setting titre="fail" v-model='grilleInverseBool'></setting>		
 			<label >
 				inverse grille
 				<input type="checkbox" v-model='grilleInverseBool'>
@@ -40,8 +43,10 @@
 			@select = "print($event)"
 		><sub>harmo</sub>\<sup>mel</sup></router-view>
 	</div> 
-	<midiButton></midiButton>
-	<div id="fou"></div>
+	<footer>
+		<div id="fou"></div>	
+		<midiButton></midiButton>
+	</footer>
 </div>
 </template>
 
@@ -51,7 +56,14 @@
 		width: 30%;
 		/*height: 20%;*/
 	}
-	#fou{
+	footer{
+		display: flex; 
+		width: 100%;
+
+		position: fixed;
+		bottom: 0;
+		z-index: 1;
+		background-color: white;
 		height: 100px;
 		overflow: scroll;
 	}
@@ -77,6 +89,7 @@
 		justify-content: center;
 	}
 	#stats{
+		height: 60%;
 		display: flex;
 		flex-flow: row wrap;
 		align-items: center;
@@ -93,12 +106,13 @@
 <script>
 
 	import axios from 'axios'
-	import {rotate, add} from './utils'
+	import {rotate, add, rythme, until} from './utils'
 	import convert2ly from './lilypond'
 	import midiButton from './midiButton.vue'
+	import setting from './statsSettings.vue'
 
 	export default {
-		components: {midiButton},
+		components: {setting, midiButton},
 		data () {
 			return {
 				duration: 16,
@@ -114,10 +128,12 @@
 		},
 		methods: {
 			print ({indexGrille, transpose}) {
-				var grille = rotate(this.grille, indexGrille)
-				var mel = add(this.mel, transpose)
+				var grille = rotate(rythme(this.grille, this.rythmeGrille), indexGrille)
+				var mel = add(until(rythme(this.mel, this.rythmeMel), this.duration), transpose)
 				mel = convert2ly(mel, this.rythmeMel, this.duration)
+				console.log(grille)
 				grille = convert2ly(grille, this.rythmeGrille, this.duration)
+				console.log(grille)
 				this.getLilypond(mel, grille)
 			},
 			getLilypond (mel, basse) {
@@ -128,7 +144,7 @@
 				})
 			},
 			createSVG (string) {
-				var div = document.querySelector('#fou')
+				var div = document.querySelector('footer #fou')
 				div.innerHTML = string
 			},
 			swap () {
@@ -139,23 +155,8 @@
 		},
 		filters: {
 			add,
-			until (grille, dur) {
-				var res = ''
-				for (var i = 0; i < dur; i++) {
-				  res += grille[i % grille.length]
-				}
-				return res
-			},
-			rythme (grille, rythmes) {
-				var res = ''
-				for (var i = 0; i < grille.length; i++) {
-					var rythme = rythmes[i % rythmes.length]
-					for (var j = 0; j < parseInt(rythme); j++) {
-						res += grille[i]
-					}
-				}
-				return res
-			},
+			until,
+			rythme,
 			inverse (grille, bool) {
 				if (bool) {
 					var res = ''

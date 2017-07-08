@@ -2,7 +2,7 @@
 	<div>
 		<label for="">
 			{{ titre }}
-			<input type="checkbox" @update='$emit("update",$event.target.value)'>
+			<input type="checkbox" @input='value=$event.target.value'>
 		</label>
 	</div>
 </template>
@@ -13,6 +13,6 @@
 
 <script>
 	export default {
-		props: ['value', 'titre']
+		props: ['titre']
 	}
 </script>

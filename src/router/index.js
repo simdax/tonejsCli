@@ -6,8 +6,8 @@ import timbre from '@/components/timbre/main'
 import filter from '@/components/timbre/freeverb'
 import harmonisation from '@/components/harmonisation/main'
 
-import stat from '@/components/harmonisation/statistics.vue'
-import routerStats from '../components/harmonisation/router'
+import stat from '@/components/stats/statistics.vue'
+import routerStats from '../components/stats/router'
 
 Vue.use(Router)
 

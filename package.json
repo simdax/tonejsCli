@@ -5,7 +5,7 @@
   "author": "simdax <simoncornaz@gmail.com>",
   "private": true,
   "scripts": {
-    "dev": "nodemon --ignore src/* build/dev-server.js",
+    "dev": "nodemon --ignore src build/dev-server.js",
     "start": "node build/dev-server.js",
     "build": "node build/build.js",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",

@@ -4,6 +4,16 @@ function pitch2Note (pitch) {
 	return note
 }
 
+// function slurs (durs, total) {
+// 	var sums = durs.reduce((a, b) => {
+// 		if (!Array.isArray(a)) {
+// 			return [a, a + b]
+// 		} else {
+// 			return a.concat(a[a.length - 1] + b)
+// 		}
+// 	})
+// }
+
 function notation (mel, rythme, resolution) {
 	var note = pitch2Note(parseInt(mel))
 	// okay okay .......
@@ -11,7 +21,7 @@ function notation (mel, rythme, resolution) {
 	// 8, 8., 4, 4 ~ 16 , 4. ,4 ~8.  ,2,2 ~ 16
 	var rules = [`${note}16`, `${note}8`, `${note}8.`,
 							`${note}4`, `${note}4~${note}16`, `${note}4.`, `${note}4..`,
-							`${note}2`, `${note}2 ~ ${note}16`]
+							`${note}2`, `${note}2~${note}16`]
 	var index = parseInt(rythme) - 1
 	var res = rules[index]
 	// console.log(index, res)
