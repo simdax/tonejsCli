@@ -36,6 +36,26 @@ export function rythme (grille, rythmes) {
 				return res
 			}
 
+export function sum (durs, total) {
+	return durs.reduce((a, b) => {
+		if (!Array.isArray(a)) {
+			return [a, a + b]
+		} else {
+			return a.concat(a[a.length - 1] + b)
+		}
+	})
+}
+
+export function untilDur (grille, dur) {
+				var res = ''
+				var sum = sum(grille.split('').map(v => { return parseInt(v) }))
+				console.log(sum)
+				for (var i = 0; i < dur; i++) {
+				  res += grille[i % grille.length]
+				}
+				return res
+			}
+
 export function until (grille, dur) {
 				var res = ''
 				for (var i = 0; i < dur; i++) {
@@ -44,20 +64,15 @@ export function until (grille, dur) {
 				return res
 			}
 
-export function inverse (grille, bool) {
-				if (bool) {
+export function inverse (grille) {
 					var res = ''
 					for (var i = grille.length - 1; i >= 0; i--) {
 						res += grille[i]
 					}
 					return res
-				} else {
-					return grille
-				}
 			}
 
-export function reverse (grille, bool) {
-				if (bool) {
+export function reverse (grille) {
 					var intervalles = [parseInt(grille[0])]
 					for (var i = 1; i < grille.length; i++) {
 						var lettre = parseInt(grille[i])
@@ -79,7 +94,4 @@ export function reverse (grille, bool) {
 					if (res.length > 0) {
 						return res.join().replace(/,/g, '')
 					}
-				} else {
-					return grille
-				}
 			}

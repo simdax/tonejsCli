@@ -1,4 +1,4 @@
-import stats from './statsTab.vue'
+import stats from './tab.vue'
 
 export default {
 		path: '/',

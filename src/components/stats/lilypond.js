@@ -1,37 +1,45 @@
-function pitch2Note (pitch) {
+function createNote (pitch) {
 	var note = ''
-	note = 'cdefgab'[pitch]
+	if (Array.isArray(pitch)) {
+		note += '<'
+		for (var i = 0; i < pitch.length; i++) {
+			note += createNote(pitch[i])
+			if (i !== pitch.length - 1) { note += ' ' }
+		}
+		note += '>'
+	} else {
+		note = 'cdefgab'[pitch]
+	}
 	return note
 }
 
-// function slurs (durs, total) {
-// 	var sums = durs.reduce((a, b) => {
-// 		if (!Array.isArray(a)) {
-// 			return [a, a + b]
-// 		} else {
-// 			return a.concat(a[a.length - 1] + b)
-// 		}
-// 	})
-// }
-
-function notation (mel, rythme, resolution) {
-	var note = pitch2Note(parseInt(mel))
+function notation (mel, index) {
+	var note
+	if (Array.isArray(mel)) {
+		note = createNote(mel)
+	}	else { note = createNote(parseInt(mel)) }
 	// okay okay .......
-	// rythme = parseInt(rythme) / resolution
-	// 8, 8., 4, 4 ~ 16 , 4. ,4 ~8.  ,2,2 ~ 16
-	var rules = [`${note}16`, `${note}8`, `${note}8.`,
-							`${note}4`, `${note}4~${note}16`, `${note}4.`, `${note}4..`,
-							`${note}2`, `${note}2~${note}16`]
-	var index = parseInt(rythme) - 1
+	var rules = [`${note}16`,
+							 `${note}8`, `${note}8.`,
+							 `${note}4`, `${note}4~${note}16`, `${note}4.`, `${note}4..`,
+							 `${note}2`, `${note}2~${note}16`]
 	var res = rules[index]
 	// console.log(index, res)
 	return res
 }
 
-export default function convert2ly (mel, rythme, resolution) {
+import {isEqual} from 'lodash'
+
+export function convert2ly (grille) {
+	console.log(grille)
 	var res = ''
-	for (var i = 0; i < mel.length; i++) {
-		res += notation(mel[i], rythme[i % rythme.length], resolution) + ' '
+	for (var i = 0; i < grille.length; i++) {
+		var count = 0
+		// console.log(grille[i + 1] === grille[i], grille[i + 1], grille[i])
+		while (isEqual(grille[i + 1], grille[i])) {
+			count++; i++
+		}
+		res += notation(grille[i], count) + ' '
 	}
 	return '{ ' + res + '}'
 }

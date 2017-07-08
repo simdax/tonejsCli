@@ -4,474 +4,228 @@
 <tspan>
  </tspan>
 </text>
-<rect transform="translate(5.6906, 6.8953)" x="36.2709" y="-0.1000" width="1.9743" height="0.2000" ry="0.1000" fill="currentColor"/>
-<rect transform="translate(5.6906, 6.8953)" x="38.5513" y="-0.1000" width="1.9743" height="0.2000" ry="0.1000" fill="currentColor"/>
-<rect transform="translate(5.6906, 6.8953)" x="40.8317" y="-0.1000" width="1.9743" height="0.2000" ry="0.1000" fill="currentColor"/>
-<rect transform="translate(5.6906, 6.8953)" x="44.0292" y="-0.1000" width="1.9743" height="0.2000" ry="0.1000" fill="currentColor"/>
-<rect transform="translate(5.6906, 5.8953)" x="44.0292" y="-0.1000" width="1.9743" height="0.2000" ry="0.1000" fill="currentColor"/>
-<rect transform="translate(5.6906, 6.8953)" x="46.3096" y="-0.1000" width="1.9743" height="0.2000" ry="0.1000" fill="currentColor"/>
-<rect transform="translate(5.6906, 5.8953)" x="46.3096" y="-0.1000" width="1.9743" height="0.2000" ry="0.1000" fill="currentColor"/>
-<rect transform="translate(5.6906, 6.8953)" x="49.5142" y="-0.1000" width="1.9743" height="0.2000" ry="0.1000" fill="currentColor"/>
-<rect transform="translate(5.6906, 5.8953)" x="49.5142" y="-0.1000" width="1.9743" height="0.2000" ry="0.1000" fill="currentColor"/>
-<rect transform="translate(5.6906, 6.8953)" x="52.7117" y="-0.1000" width="1.9743" height="0.2000" ry="0.1000" fill="currentColor"/>
-<rect transform="translate(5.6906, 5.8953)" x="52.7117" y="-0.1000" width="1.9743" height="0.2000" ry="0.1000" fill="currentColor"/>
-<rect transform="translate(5.6906, 4.8953)" x="52.7117" y="-0.1000" width="1.9743" height="0.2000" ry="0.1000" fill="currentColor"/>
-<rect transform="translate(5.6906, 6.8953)" x="54.9921" y="-0.1000" width="1.9743" height="0.2000" ry="0.1000" fill="currentColor"/>
-<rect transform="translate(5.6906, 5.8953)" x="54.9921" y="-0.1000" width="1.9743" height="0.2000" ry="0.1000" fill="currentColor"/>
-<rect transform="translate(5.6906, 4.8953)" x="54.9921" y="-0.1000" width="1.9743" height="0.2000" ry="0.1000" fill="currentColor"/>
-<rect transform="translate(5.6906, 6.8953)" x="57.2725" y="-0.1000" width="1.9743" height="0.2000" ry="0.1000" fill="currentColor"/>
-<rect transform="translate(5.6906, 5.8953)" x="57.2725" y="-0.1000" width="1.9743" height="0.2000" ry="0.1000" fill="currentColor"/>
-<rect transform="translate(5.6906, 4.8953)" x="57.2725" y="-0.1000" width="1.9743" height="0.2000" ry="0.1000" fill="currentColor"/>
-<rect transform="translate(94.9235, 9.8953)" x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
-<rect transform="translate(54.4667, 18.8953)" x="0.0000" y="-2.0000" width="0.1900" height="4.0500" ry="0.0000" fill="currentColor"/>
-<rect transform="translate(77.3789, 7.9491)" x="0.0000" y="12.9962" width="0.1900" height="4.9500" ry="0.0000" fill="currentColor"/>
-<rect transform="translate(54.4667, 9.8953)" x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
-<rect transform="translate(94.9235, 18.8953)" x="0.0000" y="-2.0000" width="0.1900" height="4.0500" ry="0.0000" fill="currentColor"/>
-<rect transform="translate(77.3789, 27.8953)" x="0.0000" y="-2.0500" width="0.1900" height="4.0500" ry="0.0000" fill="currentColor"/>
-<rect transform="translate(54.4667, 27.8953)" x="0.0000" y="-2.0500" width="0.1900" height="4.0500" ry="0.0000" fill="currentColor"/>
-<rect transform="translate(54.4667, 7.9491)" x="0.0000" y="12.9962" width="0.1900" height="4.9500" ry="0.0000" fill="currentColor"/>
-<rect transform="translate(113.6210, 9.8953)" x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
-<rect transform="translate(113.6210, 18.8953)" x="0.0000" y="-2.0000" width="0.1900" height="4.0500" ry="0.0000" fill="currentColor"/>
-<rect transform="translate(113.6210, 27.8953)" x="0.0000" y="-2.0500" width="0.1900" height="4.0500" ry="0.0000" fill="currentColor"/>
-<rect transform="translate(77.3789, 18.8953)" x="0.0000" y="-2.0000" width="0.1900" height="4.0500" ry="0.0000" fill="currentColor"/>
-<rect transform="translate(94.9235, 27.8953)" x="0.0000" y="-2.0500" width="0.1900" height="4.0500" ry="0.0000" fill="currentColor"/>
-<rect transform="translate(113.6210, 7.9491)" x="0.0000" y="12.9962" width="0.1900" height="4.9500" ry="0.0000" fill="currentColor"/>
-<rect transform="translate(94.9235, 7.9491)" x="0.0000" y="12.9962" width="0.1900" height="4.9500" ry="0.0000" fill="currentColor"/>
-<line transform="translate(14.2264, 11.8953)" stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="-0.0000" x2="99.5346" y2="-0.0000"/>
-<line transform="translate(14.2264, 10.8953)" stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="-0.0000" x2="99.5346" y2="-0.0000"/>
-<line transform="translate(14.2264, 9.8953)" stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="-0.0000" x2="99.5346" y2="-0.0000"/>
-<line transform="translate(14.2264, 8.8953)" stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="-0.0000" x2="99.5346" y2="-0.0000"/>
-<line transform="translate(14.2264, 7.8953)" stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="-0.0000" x2="99.5346" y2="-0.0000"/>
-<rect transform="translate(5.6906, 21.8953)" x="63.0962" y="-0.1000" width="1.9743" height="0.2000" ry="0.1000" fill="currentColor"/>
-<rect transform="translate(5.6906, 21.8953)" x="67.2108" y="-0.1000" width="1.9743" height="0.2000" ry="0.1000" fill="currentColor"/>
-<rect transform="translate(5.6906, 21.8953)" x="72.3418" y="-0.1000" width="1.9743" height="0.2000" ry="0.1000" fill="currentColor"/>
-<rect transform="translate(5.6906, 21.8953)" x="76.4563" y="-0.1000" width="1.9743" height="0.2000" ry="0.1000" fill="currentColor"/>
-<line transform="translate(14.2264, 20.8953)" stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="-0.0000" x2="99.5346" y2="-0.0000"/>
-<line transform="translate(14.2264, 19.8953)" stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="-0.0000" x2="99.5346" y2="-0.0000"/>
-<line transform="translate(14.2264, 18.8953)" stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="-0.0000" x2="99.5346" y2="-0.0000"/>
-<line transform="translate(14.2264, 17.8953)" stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="-0.0000" x2="99.5346" y2="-0.0000"/>
-<line transform="translate(14.2264, 16.8953)" stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="-0.0000" x2="99.5346" y2="-0.0000"/>
-<line transform="translate(14.2264, 29.8953)" stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="-0.0000" x2="99.5346" y2="-0.0000"/>
-<line transform="translate(14.2264, 28.8953)" stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="-0.0000" x2="99.5346" y2="-0.0000"/>
-<line transform="translate(14.2264, 27.8953)" stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="-0.0000" x2="99.5346" y2="-0.0000"/>
-<line transform="translate(14.2264, 26.8953)" stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="-0.0000" x2="99.5346" y2="-0.0000"/>
-<line transform="translate(14.2264, 25.8953)" stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="-0.0000" x2="99.5346" y2="-0.0000"/>
-<rect transform="translate(5.6906, 24.8953)" x="63.0962" y="-0.1000" width="1.9743" height="0.2000" ry="0.1000" fill="currentColor"/>
-<rect transform="translate(5.6906, 24.8953)" x="67.2108" y="-0.1000" width="1.9743" height="0.2000" ry="0.1000" fill="currentColor"/>
-<rect transform="translate(5.6906, 24.8953)" x="72.3418" y="-0.1000" width="1.9743" height="0.2000" ry="0.1000" fill="currentColor"/>
-<rect transform="translate(5.6906, 24.8953)" x="76.4563" y="-0.1000" width="1.9743" height="0.2000" ry="0.1000" fill="currentColor"/>
-<rect transform="translate(5.6906, 24.8953)" x="99.3653" y="-0.1000" width="1.9743" height="0.2000" ry="0.1000" fill="currentColor"/>
-<rect transform="translate(5.6906, 24.8953)" x="103.4799" y="-0.1000" width="1.9743" height="0.2000" ry="0.1000" fill="currentColor"/>
-<rect transform="translate(77.3789, 9.8953)" x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:3:36:51">
-<path transform="translate(78.3614, 24.8953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
+<rect transform="translate(5.6906, 7.3756)" x="16.9068" y="-0.1000" width="1.9743" height="0.2000" ry="0.1000" fill="currentColor"/>
+<rect transform="translate(5.6906, 7.3756)" x="34.1538" y="-0.1000" width="1.9743" height="0.2000" ry="0.1000" fill="currentColor"/>
+<rect transform="translate(5.6906, 7.3756)" x="37.8700" y="-0.1000" width="1.9743" height="0.2000" ry="0.1000" fill="currentColor"/>
+<rect transform="translate(57.1705, 10.3756)" x="0.0000" y="-2.0000" width="0.1900" height="4.0000" ry="0.0000" fill="currentColor"/>
+<rect transform="translate(57.1705, 19.3756)" x="0.0000" y="-2.0000" width="0.1900" height="4.0500" ry="0.0000" fill="currentColor"/>
+<rect transform="translate(57.1705, 28.3756)" x="0.0000" y="-2.0500" width="0.1900" height="4.0500" ry="0.0000" fill="currentColor"/>
+<rect transform="translate(57.1705, 8.4294)" x="0.0000" y="12.9962" width="0.1900" height="4.9500" ry="0.0000" fill="currentColor"/>
+<line transform="translate(14.2264, 30.3756)" stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="-0.0000" x2="43.0841" y2="-0.0000"/>
+<line transform="translate(14.2264, 29.3756)" stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="-0.0000" x2="43.0841" y2="-0.0000"/>
+<line transform="translate(14.2264, 28.3756)" stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="-0.0000" x2="43.0841" y2="-0.0000"/>
+<line transform="translate(14.2264, 27.3756)" stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="-0.0000" x2="43.0841" y2="-0.0000"/>
+<line transform="translate(14.2264, 26.3756)" stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="-0.0000" x2="43.0841" y2="-0.0000"/>
+<line transform="translate(14.2264, 21.3756)" stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="-0.0000" x2="43.0841" y2="-0.0000"/>
+<line transform="translate(14.2264, 20.3756)" stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="-0.0000" x2="43.0841" y2="-0.0000"/>
+<line transform="translate(14.2264, 19.3756)" stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="-0.0000" x2="43.0841" y2="-0.0000"/>
+<line transform="translate(14.2264, 18.3756)" stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="-0.0000" x2="43.0841" y2="-0.0000"/>
+<line transform="translate(14.2264, 17.3756)" stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="-0.0000" x2="43.0841" y2="-0.0000"/>
+<rect transform="translate(5.6906, 16.3756)" x="42.6524" y="-0.1000" width="1.9743" height="0.2000" ry="0.1000" fill="currentColor"/>
+<line transform="translate(14.2264, 12.3756)" stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="-0.0000" x2="43.0841" y2="-0.0000"/>
+<line transform="translate(14.2264, 11.3756)" stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="-0.0000" x2="43.0841" y2="-0.0000"/>
+<line transform="translate(14.2264, 10.3756)" stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="-0.0000" x2="43.0841" y2="-0.0000"/>
+<line transform="translate(14.2264, 9.3756)" stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="-0.0000" x2="43.0841" y2="-0.0000"/>
+<line transform="translate(14.2264, 8.3756)" stroke-linejoin="round" stroke-linecap="round" stroke-width="0.1000" stroke="currentColor" x1="0.0500" y1="-0.0000" x2="43.0841" y2="-0.0000"/>
+<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:3:43:58">
+<path transform="translate(48.6720, 9.3756) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
 </a>
-<rect transform="translate(78.4264, 27.8953)" x="-0.0650" y="-2.8122" width="0.1300" height="3.3122" ry="0.0400" fill="currentColor"/>
-<rect transform="translate(79.6126, 18.8953)" x="-0.0650" y="-2.5000" width="0.1300" height="5.3122" ry="0.0400" fill="currentColor"/>
-<rect transform="translate(82.5409, 27.8953)" x="-0.0650" y="-2.8122" width="0.1300" height="3.3122" ry="0.0400" fill="currentColor"/>
-<rect transform="translate(86.9978, 18.8953)" x="-0.0650" y="-1.3122" width="0.1300" height="4.9789" ry="0.0400" fill="currentColor"/>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:3:42:57">
-<path transform="translate(86.9328, 25.8953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
+<rect transform="translate(40.2384, 28.3756)" x="-0.0650" y="-1.8122" width="0.1300" height="3.3122" ry="0.0400" fill="currentColor"/>
+<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:3:35:50">
+<path transform="translate(43.8896, 6.8756) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:60:75">
-<path transform="translate(86.9328, 17.3953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
+<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:5:49:64">
+<path transform="translate(48.6720, 17.3756) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:60:75">
-<path transform="translate(86.9328, 18.3953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
+<rect transform="translate(43.9546, 10.3756)" x="-0.0650" y="-3.3122" width="0.1300" height="4.8583" ry="0.0400" fill="currentColor"/>
+<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:3:39:54">
+<path transform="translate(46.1558, 9.8756) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:60:75">
-<path transform="translate(86.9328, 19.3953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
+<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:5:47:62">
+<path transform="translate(48.6720, 18.8756) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:3:42:57">
-<text transform="translate(86.9328, 6.3111)" font-family="sans-serif" font-size="2.6163" text-anchor="start" fill="currentColor">
+<rect transform="translate(46.2208, 10.3756)" x="-0.0650" y="-0.3122" width="0.1300" height="2.2995" ry="0.0400" fill="currentColor"/>
+<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:21:36">
+<text transform="translate(48.6720, 5.7914)" font-family="sans-serif" font-size="2.6163" text-anchor="start" fill="currentColor">
+<tspan>
+D</tspan>
+</text>
+<text transform="translate(50.6864, 5.7914)" font-family="sans-serif" font-size="2.6163" text-anchor="start" fill="currentColor">
+<tspan/>
+</text>
+<text transform="translate(50.6864, 5.7914)" font-family="sans-serif" font-size="2.6163" text-anchor="start" fill="currentColor">
+<tspan/>
+</text>
+<text transform="translate(50.6864, 4.2914)" font-family="sans-serif" font-size="1.8500" text-anchor="start" fill="currentColor">
+<tspan/>
+</text>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:5:40:55">
+<path transform="translate(40.1734, 17.8756) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
+</a>
+<polygon transform="translate(26.3925, 12.3756)" stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="2.6062 -0.2000 2.6062 0.2000 0.0400 0.2000 0.0400 -0.2000"/>
+<polygon transform="translate(22.9264, 13.1856)" stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="6.0724 -0.2000 6.0724 0.2000 0.0400 0.2000 0.0400 -0.2000"/>
+<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:3:28:43">
+<path transform="translate(37.6573, 7.8756) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
+</a>
+<rect transform="translate(37.7223, 10.3756)" x="-0.0650" y="-2.3122" width="0.1300" height="3.3205" ry="0.0400" fill="currentColor"/>
+<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:18:33">
+<text transform="translate(40.1734, 5.7914)" font-family="sans-serif" font-size="2.6163" text-anchor="start" fill="currentColor">
 <tspan>
 A</tspan>
 </text>
-<text transform="translate(88.7424, 6.3111)" font-family="sans-serif" font-size="2.6163" text-anchor="start" fill="currentColor">
+<text transform="translate(41.9830, 5.7914)" font-family="sans-serif" font-size="2.6163" text-anchor="start" fill="currentColor">
 <tspan/>
 </text>
-<text transform="translate(88.7424, 6.3111)" font-family="sans-serif" font-size="2.6163" text-anchor="start" fill="currentColor">
+<text transform="translate(41.9830, 5.7914)" font-family="sans-serif" font-size="2.6163" text-anchor="start" fill="currentColor">
 <tspan/>
 </text>
-<text transform="translate(88.7424, 4.8111)" font-family="sans-serif" font-size="1.8500" text-anchor="start" fill="currentColor">
-<tspan/>
-</text>
-</a>
-<rect transform="translate(83.7271, 18.8953)" x="-0.0650" y="-2.5000" width="0.1300" height="5.3122" ry="0.0400" fill="currentColor"/>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:3:39:54">
-<path transform="translate(82.4759, 24.8953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:57:72">
-<path transform="translate(82.4759, 19.8953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:57:72">
-<path transform="translate(82.4759, 20.8953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:57:72">
-<path transform="translate(82.4759, 21.8953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:48:63">
-<path transform="translate(69.1158, 20.8953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:48:63">
-<path transform="translate(69.1158, 21.8953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:3:30:45">
-<text transform="translate(69.1158, 6.3111)" font-family="sans-serif" font-size="2.6163" text-anchor="start" fill="currentColor">
-<tspan>
-C</tspan>
-</text>
-<text transform="translate(70.9596, 6.3111)" font-family="sans-serif" font-size="2.6163" text-anchor="start" fill="currentColor">
-<tspan/>
-</text>
-<text transform="translate(70.9596, 6.3111)" font-family="sans-serif" font-size="2.6163" text-anchor="start" fill="currentColor">
-<tspan/>
-</text>
-<text transform="translate(70.9596, 4.8111)" font-family="sans-serif" font-size="1.8500" text-anchor="start" fill="currentColor">
+<text transform="translate(41.9830, 4.2914)" font-family="sans-serif" font-size="1.8500" text-anchor="start" fill="currentColor">
 <tspan/>
 </text>
 </a>
-<rect transform="translate(63.3571, 27.8953)" x="-0.0650" y="-1.3122" width="0.1300" height="3.3122" ry="0.0400" fill="currentColor"/>
-<rect transform="translate(63.3571, 18.8953)" x="-0.0650" y="-0.8122" width="0.1300" height="4.8122" ry="0.0400" fill="currentColor"/>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:48:63">
-<path transform="translate(69.1158, 19.8953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
+<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:3:32:47">
+<path transform="translate(40.1734, 7.3756) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
 </a>
-<path transform="translate(63.4221, 9.8553) scale(0.0040, -0.0040)" d="M0 0h-16v250h16c98 58 227 148 227 259c0 57 -16 112 -41 163c-3 16 10 27 23 27c7 0 15 -3 20 -11c25 -56 40 -117 40 -179c0 -204 -269 -305 -269 -509z" fill="currentColor"/>
-<rect transform="translate(63.3571, 9.8953)" x="-0.0650" y="-5.3122" width="0.1300" height="5.3122" ry="0.0400" fill="currentColor"/>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:3:27:42">
-<path transform="translate(63.2921, 26.3953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
+<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:5:38:53">
+<path transform="translate(40.1734, 18.8756) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:45:60">
-<path transform="translate(63.2921, 17.8953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
+<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:5:42:57">
+<path transform="translate(40.1734, 16.8756) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:45:60">
-<path transform="translate(63.2921, 18.8953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
+<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:18:33">
+<path transform="translate(40.1734, 26.3756) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:45:60">
-<path transform="translate(63.2921, 19.8953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
+<rect transform="translate(40.2384, 10.3756)" x="-0.0650" y="-2.8122" width="0.1300" height="3.6348" ry="0.0400" fill="currentColor"/>
+<rect transform="translate(40.2384, 19.3756)" x="-0.0650" y="-2.3122" width="0.1300" height="5.3122" ry="0.0400" fill="currentColor"/>
+<rect transform="translate(54.9693, 10.3756)" x="-0.0650" y="-1.8122" width="0.1300" height="3.6261" ry="0.0400" fill="currentColor"/>
+<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:3:50:65">
+<path transform="translate(54.9043, 8.3756) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:2:65:80">
-<path transform="translate(63.2921, 4.3953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
+<polygon transform="translate(52.3882, 11.5336)" stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="2.6062 -0.3580 2.6062 0.0420 0.0400 0.2000 0.0400 -0.2000"/>
+<polygon transform="translate(48.6720, 12.5656)" stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="6.3224 -0.5800 6.3224 -0.1800 0.0400 0.2000 0.0400 -0.2000"/>
+<polygon transform="translate(43.8896, 11.0991)" stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="2.3562 0.2665 2.3562 0.6665 0.0400 0.2000 0.0400 -0.2000"/>
+<polygon transform="translate(40.1734, 11.1856)" stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="6.0724 0.9900 6.0724 1.3900 0.0400 0.2000 0.0400 -0.2000"/>
+<polygon transform="translate(35.1411, 10.9025)" stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="2.6062 -0.5369 2.6062 -0.1369 0.0400 0.2000 0.0400 -0.2000"/>
+<polygon transform="translate(31.4249, 12.1856)" stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="6.3224 -1.0100 6.3224 -0.6100 0.0400 0.2000 0.0400 -0.2000"/>
+<rect transform="translate(48.7370, 28.3756)" x="-0.0650" y="0.1878" width="0.1300" height="3.1455" ry="0.0400" fill="currentColor"/>
+<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:21:36">
+<path transform="translate(48.6720, 28.3756) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
 </a>
-<polygon transform="translate(26.7739, 11.9769)" stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="2.3704 -0.2817 2.3704 0.1183 0.0400 0.2000 0.0400 -0.2000"/>
-<polygon transform="translate(23.5764, 12.8953)" stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="5.5679 -0.3900 5.5679 0.0100 0.0400 0.2000 0.0400 -0.2000"/>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:51:66">
-<path transform="translate(73.2304, 19.8953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
+<rect transform="translate(48.7370, 10.3756)" x="-0.0650" y="-0.8122" width="0.1300" height="2.9983" ry="0.0400" fill="currentColor"/>
+<rect transform="translate(48.7370, 19.3756)" x="-0.0650" y="-2.8122" width="0.1300" height="5.8122" ry="0.0400" fill="currentColor"/>
+<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:5:51:66">
+<path transform="translate(48.6720, 16.3756) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:54:69">
-<path transform="translate(78.3614, 20.8953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
+<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:3:46:61">
+<path transform="translate(52.3882, 8.8756) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:54:69">
-<path transform="translate(78.3614, 21.8953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
+<rect transform="translate(52.4532, 10.3756)" x="-0.0650" y="-1.3122" width="0.1300" height="3.2764" ry="0.0400" fill="currentColor"/>
+<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/template.ly:23:2:3">
 </a>
-<rect transform="translate(73.2954, 27.8953)" x="-0.0650" y="-2.8122" width="0.1300" height="3.3122" ry="0.0400" fill="currentColor"/>
-<rect transform="translate(74.4816, 18.8953)" x="-0.0650" y="-2.5000" width="0.1300" height="5.3122" ry="0.0400" fill="currentColor"/>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:3:33:48">
-<path transform="translate(73.2304, 24.8953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
+<path transform="translate(19.2264, 28.3756) scale(0.0040, -0.0040)" d="M359 27c-49 0 -75 42 -75 75c0 38 27 77 72 77c4 0 9 0 14 -1c-28 37 -72 59 -120 59c-106 0 -113 -73 -113 -186v-51v-51c0 -113 7 -187 113 -187c80 0 139 70 158 151c2 7 7 10 12 10c6 0 13 -4 13 -12c0 -94 -105 -174 -183 -174c-68 0 -137 21 -184 70
+c-49 51 -66 122 -66 193s17 142 66 193c47 49 116 69 184 69c87 0 160 -64 175 -150c1 -5 1 -9 1 -13c0 -40 -30 -72 -67 -72z" fill="currentColor"/>
+<rect transform="translate(22.9914, 10.3756)" x="-0.0650" y="-3.3122" width="0.1300" height="6.1222" ry="0.0400" fill="currentColor"/>
+<rect transform="translate(22.9914, 19.3756)" x="-0.0650" y="-1.8122" width="0.1300" height="5.1455" ry="0.0400" fill="currentColor"/>
+<path transform="translate(15.0264, 27.3756) scale(0.0040, -0.0040)" d="M557 -125c0 28 23 51 51 51s51 -23 51 -51s-23 -51 -51 -51s-51 23 -51 51zM557 125c0 28 23 51 51 51s51 -23 51 -51s-23 -51 -51 -51s-51 23 -51 51zM232 263c172 0 293 -88 293 -251c0 -263 -263 -414 -516 -521c-3 -3 -6 -4 -9 -4c-7 0 -13 6 -13 13c0 3 1 6 4 9
+c202 118 412 265 412 493c0 120 -63 235 -171 235c-74 0 -129 -54 -154 -126c11 5 22 8 34 8c55 0 100 -45 100 -100c0 -58 -44 -106 -100 -106c-60 0 -112 47 -112 106c0 133 102 244 232 244z" fill="currentColor"/>
+<rect transform="translate(22.9914, 28.3756)" x="-0.0650" y="-1.3122" width="0.1300" height="3.3122" ry="0.0400" fill="currentColor"/>
+<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:3:10:25">
+<path transform="translate(22.9264, 6.8756) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:54:69">
-<path transform="translate(78.3614, 19.8953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:51:66">
-<path transform="translate(73.2304, 20.8953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:51:66">
-<path transform="translate(73.2304, 21.8953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<rect transform="translate(69.1808, 27.8953)" x="-0.0650" y="-2.8122" width="0.1300" height="3.3122" ry="0.0400" fill="currentColor"/>
-<rect transform="translate(70.3670, 18.8953)" x="-0.0650" y="-2.5000" width="0.1300" height="5.3122" ry="0.0400" fill="currentColor"/>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:3:30:45">
-<path transform="translate(69.1158, 24.8953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:75:90">
-<path transform="translate(109.4995, 19.3953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:75:90">
-<path transform="translate(109.4995, 20.3953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:75:90">
-<path transform="translate(109.4995, 21.3953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<rect transform="translate(105.4499, 27.8953)" x="-0.0650" y="-3.3122" width="0.1300" height="3.3122" ry="0.0400" fill="currentColor"/>
-<path transform="translate(103.9349, 20.3953) scale(0.0040, -0.0040)" d="M216 -312c0 -10 -8 -19 -18 -19s-19 9 -19 19v145l-83 -31v-158c0 -10 -9 -19 -19 -19s-18 9 -18 19v145l-32 -12c-2 -1 -5 -1 -7 -1c-11 0 -20 9 -20 20v60c0 8 5 16 13 19l46 16v160l-32 -11c-2 -1 -5 -1 -7 -1c-11 0 -20 9 -20 20v60c0 8 5 15 13 18l46 17v158
-c0 10 8 19 18 19s19 -9 19 -19v-145l83 31v158c0 10 9 19 19 19s18 -9 18 -19v-145l32 12c2 1 5 1 7 1c11 0 20 -9 20 -20v-60c0 -8 -5 -16 -13 -19l-46 -16v-160l32 11c2 1 5 1 7 1c11 0 20 -9 20 -20v-60c0 -8 -5 -15 -13 -18l-46 -17v-158zM96 65v-160l83 30v160z" fill="currentColor"/>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:3:57:72">
-<path transform="translate(109.4995, 24.3953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<rect transform="translate(106.6361, 18.8953)" x="-0.0650" y="-3.0000" width="0.1300" height="5.3122" ry="0.0400" fill="currentColor"/>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:3:54:69">
-<path transform="translate(105.3849, 24.3953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:72:87">
-<path transform="translate(105.3849, 19.3953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:72:87">
-<path transform="translate(105.3849, 20.3953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:72:87">
-<path transform="translate(105.3849, 21.3953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:3:54:69">
-<text transform="translate(105.3849, 6.3111)" font-family="sans-serif" font-size="2.6163" text-anchor="start" fill="currentColor">
-<tspan>
-D</tspan>
-</text>
-<text transform="translate(107.3994, 6.3111)" font-family="sans-serif" font-size="2.6163" text-anchor="start" fill="currentColor">
-<tspan/>
-</text>
-<text transform="translate(107.3994, 6.3111)" font-family="sans-serif" font-size="2.6163" text-anchor="start" fill="currentColor">
-<tspan/>
-</text>
-<text transform="translate(107.3994, 4.8111)" font-family="sans-serif" font-size="1.8500" text-anchor="start" fill="currentColor">
-<tspan/>
-</text>
-</a>
-<rect transform="translate(101.2431, 27.8953)" x="-0.0650" y="-1.8122" width="0.1300" height="3.3122" ry="0.0400" fill="currentColor"/>
-<polygon transform="translate(34.5322, 10.9769)" stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="2.3704 -0.2817 2.3704 0.1183 0.0400 0.2000 0.0400 -0.2000"/>
-<polygon transform="translate(31.3347, 11.8953)" stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="5.5679 -0.3900 5.5679 0.0100 0.0400 0.2000 0.0400 -0.2000"/>
-<polygon transform="translate(42.2905, 9.0586)" stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="2.3704 -0.3633 2.3704 0.0367 0.0400 0.2000 0.0400 -0.2000"/>
-<polygon transform="translate(39.0930, 10.0853)" stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="5.5679 -0.5800 5.5679 -0.1800 0.0400 0.2000 0.0400 -0.2000"/>
-<polygon transform="translate(50.0488, 9.0853)" stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="2.3704 -0.2000 2.3704 0.2000 0.0400 0.2000 0.0400 -0.2000"/>
-<polygon transform="translate(46.8513, 9.8953)" stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="5.5679 -0.2000 5.5679 0.2000 0.0400 0.2000 0.0400 -0.2000"/>
-<polygon transform="translate(58.7313, 9.0853)" stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="2.3704 -0.2000 2.3704 0.2000 0.0400 0.2000 0.0400 -0.2000"/>
-<polygon transform="translate(55.5338, 9.8953)" stroke-linejoin="round" stroke-linecap="round" stroke-width="0.0800" fill="currentColor" stroke="currentColor" points="5.5679 -0.2000 5.5679 0.2000 0.0400 0.2000 0.0400 -0.2000"/>
-<rect transform="translate(109.5645, 27.8953)" x="-0.0650" y="-3.3122" width="0.1300" height="3.3122" ry="0.0400" fill="currentColor"/>
-<rect transform="translate(110.7506, 18.8953)" x="-0.0650" y="-3.0000" width="0.1300" height="5.3122" ry="0.0400" fill="currentColor"/>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:3:48:63">
-<path transform="translate(97.0635, 25.8953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:66:81">
-<path transform="translate(97.0635, 17.3953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:66:81">
-<path transform="translate(97.0635, 18.3953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:66:81">
-<path transform="translate(97.0635, 19.3953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<rect transform="translate(91.1123, 27.8953)" x="-0.0650" y="-1.8122" width="0.1300" height="3.3122" ry="0.0400" fill="currentColor"/>
-<rect transform="translate(91.1123, 18.8953)" x="-0.0650" y="-1.3122" width="0.1300" height="4.9789" ry="0.0400" fill="currentColor"/>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:3:45:60">
-<path transform="translate(91.0473, 25.8953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:63:78">
-<path transform="translate(91.0473, 17.3953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:63:78">
-<path transform="translate(91.0473, 18.3953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:63:78">
-<path transform="translate(91.0473, 19.3953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<rect transform="translate(86.9978, 27.8953)" x="-0.0650" y="-1.8122" width="0.1300" height="3.3122" ry="0.0400" fill="currentColor"/>
-<rect transform="translate(101.2431, 18.8953)" x="-0.0650" y="-1.3122" width="0.1300" height="4.9789" ry="0.0400" fill="currentColor"/>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:3:51:66">
-<path transform="translate(101.1781, 25.8953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:69:84">
-<path transform="translate(101.1781, 17.3953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:69:84">
-<path transform="translate(101.1781, 18.3953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:69:84">
-<path transform="translate(101.1781, 19.3953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<path transform="translate(85.4828, 18.3953) scale(0.0040, -0.0040)" d="M216 -312c0 -10 -8 -19 -18 -19s-19 9 -19 19v145l-83 -31v-158c0 -10 -9 -19 -19 -19s-18 9 -18 19v145l-32 -12c-2 -1 -5 -1 -7 -1c-11 0 -20 9 -20 20v60c0 8 5 16 13 19l46 16v160l-32 -11c-2 -1 -5 -1 -7 -1c-11 0 -20 9 -20 20v60c0 8 5 15 13 18l46 17v158
-c0 10 8 19 18 19s19 -9 19 -19v-145l83 31v158c0 10 9 19 19 19s18 -9 18 -19v-145l32 12c2 1 5 1 7 1c11 0 20 -9 20 -20v-60c0 -8 -5 -16 -13 -19l-46 -16v-160l32 11c2 1 5 1 7 1c11 0 20 -9 20 -20v-60c0 -8 -5 -15 -13 -18l-46 -17v-158zM96 65v-160l83 30v160z" fill="currentColor"/>
-<rect transform="translate(97.1285, 27.8953)" x="-0.0650" y="-1.8122" width="0.1300" height="3.3122" ry="0.0400" fill="currentColor"/>
-<path transform="translate(95.6135, 18.3953) scale(0.0040, -0.0040)" d="M216 -312c0 -10 -8 -19 -18 -19s-19 9 -19 19v145l-83 -31v-158c0 -10 -9 -19 -19 -19s-18 9 -18 19v145l-32 -12c-2 -1 -5 -1 -7 -1c-11 0 -20 9 -20 20v60c0 8 5 16 13 19l46 16v160l-32 -11c-2 -1 -5 -1 -7 -1c-11 0 -20 9 -20 20v60c0 8 5 15 13 18l46 17v158
-c0 10 8 19 18 19s19 -9 19 -19v-145l83 31v158c0 10 9 19 19 19s18 -9 18 -19v-145l32 12c2 1 5 1 7 1c11 0 20 -9 20 -20v-60c0 -8 -5 -16 -13 -19l-46 -16v-160l32 11c2 1 5 1 7 1c11 0 20 -9 20 -20v-60c0 -8 -5 -15 -13 -18l-46 -17v-158zM96 65v-160l83 30v160z" fill="currentColor"/>
-<rect transform="translate(97.1285, 18.8953)" x="-0.0650" y="-1.3122" width="0.1300" height="4.9789" ry="0.0400" fill="currentColor"/>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:33:48">
-<path transform="translate(31.3347, 20.3953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<rect transform="translate(31.3997, 27.8953)" x="-0.0650" y="0.1878" width="0.1300" height="3.1455" ry="0.0400" fill="currentColor"/>
-<rect transform="translate(32.5859, 18.8953)" x="-0.0650" y="-3.0000" width="0.1300" height="5.3122" ry="0.0400" fill="currentColor"/>
-<rect transform="translate(31.3997, 9.8953)" x="-0.0650" y="-1.3122" width="0.1300" height="3.3100" ry="0.0400" fill="currentColor"/>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:3:15:30">
-<path transform="translate(31.3347, 27.8953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:33:48">
-<path transform="translate(31.3347, 19.3953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:33:48">
-<path transform="translate(31.3347, 21.3953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:2:21:36">
-<path transform="translate(31.3347, 8.3953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<rect transform="translate(29.1193, 9.8953)" x="-0.0650" y="-0.8122" width="0.1300" height="3.6244" ry="0.0400" fill="currentColor"/>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:2:17:32">
-<path transform="translate(29.0543, 8.8953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<rect transform="translate(39.1580, 18.8953)" x="-0.0650" y="-0.8122" width="0.1300" height="4.8122" ry="0.0400" fill="currentColor"/>
-<rect transform="translate(39.1580, 9.8953)" x="-0.0650" y="-2.3122" width="0.1300" height="2.4978" ry="0.0400" fill="currentColor"/>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:3:18:33">
-<path transform="translate(39.0930, 26.3953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:36:51">
-<path transform="translate(39.0930, 17.8953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:36:51">
-<path transform="translate(39.0930, 18.8953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:36:51">
-<path transform="translate(39.0930, 19.8953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:2:32:47">
-<path transform="translate(39.0930, 7.3953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:3:18:33">
-<text transform="translate(39.0930, 6.3111)" font-family="sans-serif" font-size="2.6163" text-anchor="start" fill="currentColor">
+<path transform="translate(13.8664, 23.8756) scale(0.0040, -0.0040)" d="M-15 -498c0 -261 -102 -516 -102 -765c0 -135 30 -261 129 -360c3 -3 3 -9 3 -12c0 -9 -6 -18 -15 -18c-3 0 -9 3 -12 6c-132 135 -177 312 -177 501c0 267 108 528 108 780c0 135 -33 261 -129 360c-3 3 -3 3 -3 6s0 3 3 6c96 99 129 225 129 360
+c0 252 -108 513 -108 780c0 189 45 366 177 501c3 3 9 6 12 6c9 0 15 -9 15 -18c0 -3 0 -9 -3 -12c-99 -99 -129 -225 -129 -360c0 -249 102 -504 102 -765c0 -186 -45 -363 -174 -498c129 -135 174 -312 174 -498z" fill="currentColor"/>
+<rect transform="translate(14.1664, 19.3756)" x="0.0000" y="-11.0500" width="0.1600" height="22.1000" ry="0.0500" fill="currentColor"/>
+<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:12:27">
+<text transform="translate(22.9264, 5.7914)" font-family="sans-serif" font-size="2.6163" text-anchor="start" fill="currentColor">
 <tspan>
 G</tspan>
 </text>
-<text transform="translate(41.1416, 6.3111)" font-family="sans-serif" font-size="2.6163" text-anchor="start" fill="currentColor">
+<text transform="translate(24.9750, 5.7914)" font-family="sans-serif" font-size="2.6163" text-anchor="start" fill="currentColor">
 <tspan/>
 </text>
-<text transform="translate(41.1416, 6.3111)" font-family="sans-serif" font-size="2.6163" text-anchor="start" fill="currentColor">
+<text transform="translate(24.9750, 5.7914)" font-family="sans-serif" font-size="2.6163" text-anchor="start" fill="currentColor">
 <tspan/>
 </text>
-<text transform="translate(41.1416, 4.8111)" font-family="sans-serif" font-size="1.8500" text-anchor="start" fill="currentColor">
+<text transform="translate(24.9750, 4.2914)" font-family="sans-serif" font-size="1.8500" text-anchor="start" fill="currentColor">
 <tspan/>
 </text>
 </a>
-<rect transform="translate(36.8776, 9.8953)" x="-0.0650" y="-1.8122" width="0.1300" height="3.6244" ry="0.0400" fill="currentColor"/>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:2:28:43">
-<path transform="translate(36.8126, 7.8953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<rect transform="translate(34.5972, 9.8953)" x="-0.0650" y="-1.8122" width="0.1300" height="3.7017" ry="0.0400" fill="currentColor"/>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:2:24:39">
-<path transform="translate(34.5322, 7.8953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<path transform="translate(15.0264, 10.8953) scale(0.0040, -0.0040)" d="M376 262c4 0 9 1 13 1c155 0 256 -128 256 -261c0 -76 -33 -154 -107 -210c-22 -17 -47 -28 -73 -36c3 -35 5 -70 5 -105c0 -19 -1 -39 -2 -58c-7 -120 -90 -228 -208 -228c-108 0 -195 88 -195 197c0 58 53 103 112 103c54 0 95 -47 95 -103c0 -52 -43 -95 -95 -95
+<path transform="translate(15.0264, 11.3756) scale(0.0040, -0.0040)" d="M376 262c4 0 9 1 13 1c155 0 256 -128 256 -261c0 -76 -33 -154 -107 -210c-22 -17 -47 -28 -73 -36c3 -35 5 -70 5 -105c0 -19 -1 -39 -2 -58c-7 -120 -90 -228 -208 -228c-108 0 -195 88 -195 197c0 58 53 103 112 103c54 0 95 -47 95 -103c0 -52 -43 -95 -95 -95
 c-11 0 -21 2 -31 6c26 -39 68 -65 117 -65c96 0 157 92 163 191c1 18 2 37 2 55c0 31 -1 61 -4 92c-29 -5 -58 -8 -89 -8c-188 0 -333 172 -333 374c0 177 131 306 248 441c-19 62 -37 125 -45 190c-6 52 -7 104 -7 156c0 115 55 224 149 292c3 2 7 3 10 3c4 0 7 0 10 -3
 c71 -84 133 -245 133 -358c0 -143 -86 -255 -180 -364c21 -68 39 -138 56 -207zM461 -203c68 24 113 95 113 164c0 90 -66 179 -173 190c24 -116 46 -231 60 -354zM74 28c0 -135 129 -247 264 -247c28 0 55 2 82 6c-14 127 -37 245 -63 364c-79 -8 -124 -61 -124 -119
 c0 -44 25 -91 81 -123c5 -5 7 -10 7 -15c0 -11 -10 -22 -22 -22c-3 0 -6 1 -9 2c-80 43 -117 115 -117 185c0 88 58 174 160 197c-14 58 -29 117 -46 175c-107 -121 -213 -243 -213 -403zM408 1045c-99 -48 -162 -149 -162 -259c0 -74 18 -133 36 -194
 c80 97 146 198 146 324c0 55 -4 79 -20 129z" fill="currentColor"/>
-<path transform="translate(19.2264, 27.8953) scale(0.0040, -0.0040)" d="M359 27c-49 0 -75 42 -75 75c0 38 27 77 72 77c4 0 9 0 14 -1c-28 37 -72 59 -120 59c-106 0 -113 -73 -113 -186v-51v-51c0 -113 7 -187 113 -187c80 0 139 70 158 151c2 7 7 10 12 10c6 0 13 -4 13 -12c0 -94 -105 -174 -183 -174c-68 0 -137 21 -184 70
-c-49 51 -66 122 -66 193s17 142 66 193c47 49 116 69 184 69c87 0 160 -64 175 -150c1 -5 1 -9 1 -13c0 -40 -30 -72 -67 -72z" fill="currentColor"/>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/template.ly:24:2:3">
-</a>
-<path transform="translate(15.0264, 26.8953) scale(0.0040, -0.0040)" d="M557 -125c0 28 23 51 51 51s51 -23 51 -51s-23 -51 -51 -51s-51 23 -51 51zM557 125c0 28 23 51 51 51s51 -23 51 -51s-23 -51 -51 -51s-51 23 -51 51zM232 263c172 0 293 -88 293 -251c0 -263 -263 -414 -516 -521c-3 -3 -6 -4 -9 -4c-7 0 -13 6 -13 13c0 3 1 6 4 9
-c202 118 412 265 412 493c0 120 -63 235 -171 235c-74 0 -129 -54 -154 -126c11 5 22 8 34 8c55 0 100 -45 100 -100c0 -58 -44 -106 -100 -106c-60 0 -112 47 -112 106c0 133 102 244 232 244z" fill="currentColor"/>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:3:12:27">
-<path transform="translate(23.5764, 27.8953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<path transform="translate(19.2264, 18.8953) scale(0.0040, -0.0040)" d="M359 27c-49 0 -75 42 -75 75c0 38 27 77 72 77c4 0 9 0 14 -1c-28 37 -72 59 -120 59c-106 0 -113 -73 -113 -186v-51v-51c0 -113 7 -187 113 -187c80 0 139 70 158 151c2 7 7 10 12 10c6 0 13 -4 13 -12c0 -94 -105 -174 -183 -174c-68 0 -137 21 -184 70
-c-49 51 -66 122 -66 193s17 142 66 193c47 49 116 69 184 69c87 0 160 -64 175 -150c1 -5 1 -9 1 -13c0 -40 -30 -72 -67 -72z" fill="currentColor"/>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/template.ly:16:2:3">
-</a>
-<path transform="translate(15.0264, 19.8953) scale(0.0040, -0.0040)" d="M376 262c4 0 9 1 13 1c155 0 256 -128 256 -261c0 -76 -33 -154 -107 -210c-22 -17 -47 -28 -73 -36c3 -35 5 -70 5 -105c0 -19 -1 -39 -2 -58c-7 -120 -90 -228 -208 -228c-108 0 -195 88 -195 197c0 58 53 103 112 103c54 0 95 -47 95 -103c0 -52 -43 -95 -95 -95
-c-11 0 -21 2 -31 6c26 -39 68 -65 117 -65c96 0 157 92 163 191c1 18 2 37 2 55c0 31 -1 61 -4 92c-29 -5 -58 -8 -89 -8c-188 0 -333 172 -333 374c0 177 131 306 248 441c-19 62 -37 125 -45 190c-6 52 -7 104 -7 156c0 115 55 224 149 292c3 2 7 3 10 3c4 0 7 0 10 -3
-c71 -84 133 -245 133 -358c0 -143 -86 -255 -180 -364c21 -68 39 -138 56 -207zM461 -203c68 24 113 95 113 164c0 90 -66 179 -173 190c24 -116 46 -231 60 -354zM74 28c0 -135 129 -247 264 -247c28 0 55 2 82 6c-14 127 -37 245 -63 364c-79 -8 -124 -61 -124 -119
-c0 -44 25 -91 81 -123c5 -5 7 -10 7 -15c0 -11 -10 -22 -22 -22c-3 0 -6 1 -9 2c-80 43 -117 115 -117 185c0 88 58 174 160 197c-14 58 -29 117 -46 175c-107 -121 -213 -243 -213 -403zM408 1045c-99 -48 -162 -149 -162 -259c0 -74 18 -133 36 -194
-c80 97 146 198 146 324c0 55 -4 79 -20 129z" fill="currentColor"/>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:30:45">
-<path transform="translate(23.5764, 19.3953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:30:45">
-<path transform="translate(23.5764, 20.3953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:30:45">
-<path transform="translate(23.5764, 21.3953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<path transform="translate(19.2264, 9.8953) scale(0.0040, -0.0040)" d="M359 27c-49 0 -75 42 -75 75c0 38 27 77 72 77c4 0 9 0 14 -1c-28 37 -72 59 -120 59c-106 0 -113 -73 -113 -186v-51v-51c0 -113 7 -187 113 -187c80 0 139 70 158 151c2 7 7 10 12 10c6 0 13 -4 13 -12c0 -94 -105 -174 -183 -174c-68 0 -137 21 -184 70
-c-49 51 -66 122 -66 193s17 142 66 193c47 49 116 69 184 69c87 0 160 -64 175 -150c1 -5 1 -9 1 -13c0 -40 -30 -72 -67 -72z" fill="currentColor"/>
 <a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/template.ly:5:2:3">
 </a>
-<rect transform="translate(23.6414, 9.8953)" x="-0.0650" y="-0.3122" width="0.1300" height="3.3100" ry="0.0400" fill="currentColor"/>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:2:10:25">
-<path transform="translate(23.5764, 9.3953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
+<path transform="translate(19.2264, 10.3756) scale(0.0040, -0.0040)" d="M359 27c-49 0 -75 42 -75 75c0 38 27 77 72 77c4 0 9 0 14 -1c-28 37 -72 59 -120 59c-106 0 -113 -73 -113 -186v-51v-51c0 -113 7 -187 113 -187c80 0 139 70 158 151c2 7 7 10 12 10c6 0 13 -4 13 -12c0 -94 -105 -174 -183 -174c-68 0 -137 21 -184 70
+c-49 51 -66 122 -66 193s17 142 66 193c47 49 116 69 184 69c87 0 160 -64 175 -150c1 -5 1 -9 1 -13c0 -40 -30 -72 -67 -72z" fill="currentColor"/>
+<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:5:20:35">
+<path transform="translate(22.9264, 19.3756) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:3:12:27">
-<text transform="translate(23.5764, 6.3111)" font-family="sans-serif" font-size="2.6163" text-anchor="start" fill="currentColor">
-<tspan>
-D</tspan>
-</text>
-<text transform="translate(25.5908, 6.3111)" font-family="sans-serif" font-size="2.6163" text-anchor="start" fill="currentColor">
-<tspan/>
-</text>
-<text transform="translate(25.5908, 6.3111)" font-family="sans-serif" font-size="2.6163" text-anchor="start" fill="currentColor">
-<tspan/>
-</text>
-<text transform="translate(25.5908, 4.8111)" font-family="sans-serif" font-size="1.8500" text-anchor="start" fill="currentColor">
-<tspan/>
-</text>
+<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:5:22:37">
+<path transform="translate(22.9264, 18.3756) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
 </a>
-<rect transform="translate(14.1664, 18.8953)" x="0.0000" y="-11.0500" width="0.1600" height="22.1000" ry="0.0500" fill="currentColor"/>
-<path transform="translate(13.8664, 23.3953) scale(0.0040, -0.0040)" d="M-15 -498c0 -261 -102 -516 -102 -765c0 -135 30 -261 129 -360c3 -3 3 -9 3 -12c0 -9 -6 -18 -15 -18c-3 0 -9 3 -12 6c-132 135 -177 312 -177 501c0 267 108 528 108 780c0 135 -33 261 -129 360c-3 3 -3 3 -3 6s0 3 3 6c96 99 129 225 129 360
-c0 252 -108 513 -108 780c0 189 45 366 177 501c3 3 9 6 12 6c9 0 15 -9 15 -18c0 -3 0 -9 -3 -12c-99 -99 -129 -225 -129 -360c0 -249 102 -504 102 -765c0 -186 -45 -363 -174 -498c129 -135 174 -312 174 -498z" fill="currentColor"/>
-<rect transform="translate(23.6414, 27.8953)" x="-0.0650" y="0.1878" width="0.1300" height="3.1455" ry="0.0400" fill="currentColor"/>
-<rect transform="translate(26.8389, 9.8953)" x="-0.0650" y="-0.3122" width="0.1300" height="3.2017" ry="0.0400" fill="currentColor"/>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:2:13:28">
-<path transform="translate(26.7739, 9.3953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
+<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:5:24:39">
+<path transform="translate(22.9264, 17.3756) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
 </a>
-<rect transform="translate(61.0767, 9.8953)" x="-0.0650" y="-5.3122" width="0.1300" height="5.3122" ry="0.0400" fill="currentColor"/>
-<path transform="translate(22.1264, 20.3953) scale(0.0040, -0.0040)" d="M216 -312c0 -10 -8 -19 -18 -19s-19 9 -19 19v145l-83 -31v-158c0 -10 -9 -19 -19 -19s-18 9 -18 19v145l-32 -12c-2 -1 -5 -1 -7 -1c-11 0 -20 9 -20 20v60c0 8 5 16 13 19l46 16v160l-32 -11c-2 -1 -5 -1 -7 -1c-11 0 -20 9 -20 20v60c0 8 5 15 13 18l46 17v158
-c0 10 8 19 18 19s19 -9 19 -19v-145l83 31v158c0 10 9 19 19 19s18 -9 18 -19v-145l32 12c2 1 5 1 7 1c11 0 20 -9 20 -20v-60c0 -8 -5 -16 -13 -19l-46 -16v-160l32 11c2 1 5 1 7 1c11 0 20 -9 20 -20v-60c0 -8 -5 -15 -13 -18l-46 -17v-158zM96 65v-160l83 30v160z" fill="currentColor"/>
-<rect transform="translate(24.8275, 18.8953)" x="-0.0650" y="-3.0000" width="0.1300" height="5.3122" ry="0.0400" fill="currentColor"/>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:2:54:69">
-<path transform="translate(55.5338, 5.3953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
+<path transform="translate(15.0264, 20.3756) scale(0.0040, -0.0040)" d="M376 262c4 0 9 1 13 1c155 0 256 -128 256 -261c0 -76 -33 -154 -107 -210c-22 -17 -47 -28 -73 -36c3 -35 5 -70 5 -105c0 -19 -1 -39 -2 -58c-7 -120 -90 -228 -208 -228c-108 0 -195 88 -195 197c0 58 53 103 112 103c54 0 95 -47 95 -103c0 -52 -43 -95 -95 -95
+c-11 0 -21 2 -31 6c26 -39 68 -65 117 -65c96 0 157 92 163 191c1 18 2 37 2 55c0 31 -1 61 -4 92c-29 -5 -58 -8 -89 -8c-188 0 -333 172 -333 374c0 177 131 306 248 441c-19 62 -37 125 -45 190c-6 52 -7 104 -7 156c0 115 55 224 149 292c3 2 7 3 10 3c4 0 7 0 10 -3
+c71 -84 133 -245 133 -358c0 -143 -86 -255 -180 -364c21 -68 39 -138 56 -207zM461 -203c68 24 113 95 113 164c0 90 -66 179 -173 190c24 -116 46 -231 60 -354zM74 28c0 -135 129 -247 264 -247c28 0 55 2 82 6c-14 127 -37 245 -63 364c-79 -8 -124 -61 -124 -119
+c0 -44 25 -91 81 -123c5 -5 7 -10 7 -15c0 -11 -10 -22 -22 -22c-3 0 -6 1 -9 2c-80 43 -117 115 -117 185c0 88 58 174 160 197c-14 58 -29 117 -46 175c-107 -121 -213 -243 -213 -403zM408 1045c-99 -48 -162 -149 -162 -259c0 -74 18 -133 36 -194
+c80 97 146 198 146 324c0 55 -4 79 -20 129z" fill="currentColor"/>
+<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/template.ly:15:2:3">
 </a>
-<rect transform="translate(55.5988, 9.8953)" x="-0.0650" y="-4.3122" width="0.1300" height="4.3122" ry="0.0400" fill="currentColor"/>
+<path transform="translate(19.2264, 19.3756) scale(0.0040, -0.0040)" d="M359 27c-49 0 -75 42 -75 75c0 38 27 77 72 77c4 0 9 0 14 -1c-28 37 -72 59 -120 59c-106 0 -113 -73 -113 -186v-51v-51c0 -113 7 -187 113 -187c80 0 139 70 158 151c2 7 7 10 12 10c6 0 13 -4 13 -12c0 -94 -105 -174 -183 -174c-68 0 -137 21 -184 70
+c-49 51 -66 122 -66 193s17 142 66 193c47 49 116 69 184 69c87 0 160 -64 175 -150c1 -5 1 -9 1 -13c0 -40 -30 -72 -67 -72z" fill="currentColor"/>
+<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:12:27">
+<path transform="translate(22.9264, 26.8756) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:5:29:44">
+<path transform="translate(31.4249, 19.3756) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:5:31:46">
+<path transform="translate(31.4249, 18.3756) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:5:33:48">
+<path transform="translate(31.4249, 16.8756) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
+</a>
+<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:15:30">
+<path transform="translate(31.4249, 28.8756) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
+</a>
+<rect transform="translate(31.4899, 10.3756)" x="-0.0650" y="-1.3122" width="0.1300" height="3.1139" ry="0.0400" fill="currentColor"/>
+<rect transform="translate(31.4899, 19.3756)" x="-0.0650" y="-2.3122" width="0.1300" height="5.6455" ry="0.0400" fill="currentColor"/>
+<rect transform="translate(32.6761, 28.3756)" x="-0.0650" y="-3.0000" width="0.1300" height="3.3122" ry="0.0400" fill="currentColor"/>
 <a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:3:24:39">
-<path transform="translate(55.5338, 26.3953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
+<path transform="translate(35.1411, 8.3756) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:42:57">
-<path transform="translate(55.5338, 17.8953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:42:57">
-<path transform="translate(55.5338, 18.8953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:42:57">
-<path transform="translate(55.5338, 19.8953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<rect transform="translate(55.5988, 18.8953)" x="-0.0650" y="-0.8122" width="0.1300" height="4.8122" ry="0.0400" fill="currentColor"/>
-<rect transform="translate(52.3942, 9.8953)" x="-0.0650" y="-3.8122" width="0.1300" height="3.8122" ry="0.0400" fill="currentColor"/>
-<rect transform="translate(50.1138, 9.8953)" x="-0.0650" y="-3.8122" width="0.1300" height="3.8122" ry="0.0400" fill="currentColor"/>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:2:61:76">
-<path transform="translate(61.0117, 4.3953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<rect transform="translate(58.7963, 9.8953)" x="-0.0650" y="-4.8122" width="0.1300" height="4.8122" ry="0.0400" fill="currentColor"/>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:2:57:72">
-<path transform="translate(58.7313, 4.8953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:2:50:65">
-<path transform="translate(52.3292, 5.8953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<rect transform="translate(55.5988, 27.8953)" x="-0.0650" y="-1.3122" width="0.1300" height="3.3122" ry="0.0400" fill="currentColor"/>
+<rect transform="translate(35.2061, 10.3756)" x="-0.0650" y="-1.8122" width="0.1300" height="3.1408" ry="0.0400" fill="currentColor"/>
+<rect transform="translate(26.4575, 10.3756)" x="-0.0650" y="-0.3122" width="0.1300" height="3.1222" ry="0.0400" fill="currentColor"/>
 <a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:3:21:36">
-<path transform="translate(46.8513, 26.3953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
+<path transform="translate(31.4249, 8.8756) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:39:54">
-<path transform="translate(46.8513, 17.8953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
+<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:3:17:32">
+<path transform="translate(28.9087, 9.3756) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:39:54">
-<path transform="translate(46.8513, 18.8953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
+<rect transform="translate(28.9737, 10.3756)" x="-0.0650" y="-0.8122" width="0.1300" height="3.6222" ry="0.0400" fill="currentColor"/>
+<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:3:13:28">
+<path transform="translate(26.3925, 9.8756) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:39:54">
-<path transform="translate(46.8513, 19.8953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
+<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:4:15:30">
+<text transform="translate(31.4249, 5.7914)" font-family="sans-serif" font-size="2.6163" text-anchor="start" fill="currentColor">
+<tspan>
+C</tspan>
+</text>
+<text transform="translate(33.2686, 5.7914)" font-family="sans-serif" font-size="2.6163" text-anchor="start" fill="currentColor">
+<tspan/>
+</text>
+<text transform="translate(33.2686, 5.7914)" font-family="sans-serif" font-size="2.6163" text-anchor="start" fill="currentColor">
+<tspan/>
+</text>
+<text transform="translate(33.2686, 4.2914)" font-family="sans-serif" font-size="1.8500" text-anchor="start" fill="currentColor">
+<tspan/>
+</text>
 </a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:2:43:58">
-<path transform="translate(46.8513, 6.3953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:2:35:50">
-<path transform="translate(42.2905, 6.8953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:2:46:61">
-<path transform="translate(50.0488, 5.8953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<rect transform="translate(46.9163, 9.8953)" x="-0.0650" y="-3.3122" width="0.1300" height="3.3122" ry="0.0400" fill="currentColor"/>
-<rect transform="translate(42.3555, 9.8953)" x="-0.0650" y="-2.8122" width="0.1300" height="2.7811" ry="0.0400" fill="currentColor"/>
-<rect transform="translate(44.6359, 9.8953)" x="-0.0650" y="-3.3122" width="0.1300" height="3.1266" ry="0.0400" fill="currentColor"/>
-<a style="color:inherit;" xlink:href="textedit:///home/simdax/web/tonejsCli/lilypond/./includes.ly:2:39:54">
-<path transform="translate(44.5709, 6.3953) scale(0.0040, -0.0040)" d="M220 138c56 0 109 -29 109 -91c0 -72 -56 -121 -103 -149c-36 -21 -76 -36 -117 -36c-56 0 -109 29 -109 91c0 72 56 121 103 149c36 21 76 36 117 36z" fill="currentColor"/>
-</a>
-<rect transform="translate(39.1580, 27.8953)" x="-0.0650" y="-1.3122" width="0.1300" height="3.3122" ry="0.0400" fill="currentColor"/>
-<rect transform="translate(46.9163, 27.8953)" x="-0.0650" y="-1.3122" width="0.1300" height="3.3122" ry="0.0400" fill="currentColor"/>
-<rect transform="translate(46.9163, 18.8953)" x="-0.0650" y="-0.8122" width="0.1300" height="4.8122" ry="0.0400" fill="currentColor"/>
 <a transform="translate(31.6850, 165.1512)" xlink:href="http://lilypond.org/">
 <rect x="0.0000" y="-0.4439" width="56.1316" height="2.0486" fill="none" stroke="none" stroke-width="0.0"/>
 </a>
