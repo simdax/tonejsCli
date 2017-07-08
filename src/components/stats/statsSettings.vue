@@ -1,8 +1,8 @@
 <template>
 	<div>
-		<label for="">
+		<label>
 			{{ titre }}
-			<input type="checkbox" @input='value=$event.target.value'>
+			<input type="checkbox" @change='$emit("input", $event.target.checked)'>
 		</label>
 	</div>
 </template>

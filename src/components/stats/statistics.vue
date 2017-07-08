@@ -13,36 +13,26 @@
 				<input type="number" v-model.number="duration">
 			</div>
 		</div>	
+				{{io}}
 	</header>
+	<main>
 		<div class="inversions">
-			<setting titre="fail" v-model='grilleInverseBool'></setting>		
-			<label >
-				inverse grille
-				<input type="checkbox" v-model='grilleInverseBool'>
-			</label>
-			<label > 
-				reverse grille
-				<input type="checkbox" v-model='grilleReverseBool'>
-			</label>
-			<label >
-				inverse mel
-				<input type="checkbox" v-model='melInverseBool'>
-			</label>
-			<label > 
-				reverse mel
-				<input type="checkbox" v-model='melReverseBool'>
-			</label>
-	</div>
-	<div id="stats">
-		<router-view 
-			class='io'
-			v-for = 'n in 6' :key=" n + 'stats_' "
-			:transpose='n'
-			:grille="grille | rythme(rythmeGrille) | reverse(grilleReverseBool) | inverse(grilleInverseBool) "
-			:mel= "mel | rythme(rythmeMel) | until(duration) | reverse(melReverseBool) | inverse(melInverseBool) | add(n-1)"
-			@select = "print($event)"
-		><sub>harmo</sub>\<sup>mel</sup></router-view>
-	</div> 
+			<setting titre="inverse grille" v-model='grilleInverseBool'></setting>		
+			<setting titre="reverse grille" v-model='grilleReverseBool'></setting>		
+			<setting titre="inverse mel" v-model='melInverseBool'></setting>		
+			<setting titre="reverse mel" v-model='melReverseBool'></setting>		
+		</div>
+		<div id="stats">
+			<router-view 
+				class='io'
+				v-for = 'n in 6' :key=" n + 'stats_' "
+				:transpose='n'
+				:grille="grille | rythme(rythmeGrille) | reverse(grilleReverseBool) | inverse(grilleInverseBool) "
+				:mel= "io | add(n-1)"
+				@select = "print($event)"
+			><sub>harmo</sub>\<sup>mel</sup></router-view>
+		</div> 
+	</main>
 	<footer>
 		<div id="fou"></div>	
 		<midiButton></midiButton>
@@ -57,14 +47,13 @@
 		/*height: 20%;*/
 	}
 	footer{
+		position: fixed;
 		display: flex; 
 		width: 100%;
-
-		position: fixed;
+		height: 28%;
 		bottom: 0;
 		z-index: 1;
 		background-color: white;
-		height: 100px;
 		overflow: scroll;
 	}
 	.settings{
@@ -106,7 +95,7 @@
 <script>
 
 	import axios from 'axios'
-	import {rotate, add, rythme, until} from './utils'
+	import * as utils from './utils'
 	import convert2ly from './lilypond'
 	import midiButton from './midiButton.vue'
 	import setting from './statsSettings.vue'
@@ -126,14 +115,17 @@
 				grille: '0514'
 			}
 		},
+		computed: {
+			io () {
+				return	utils.inverse(utils.reverse(utils.until(utils.rythme(this.mel, this.rythmeMel), this.duration), this.melReverseBool), this.melInverseBool)
+			}
+		},
 		methods: {
 			print ({indexGrille, transpose}) {
-				var grille = rotate(rythme(this.grille, this.rythmeGrille), indexGrille)
-				var mel = add(until(rythme(this.mel, this.rythmeMel), this.duration), transpose)
+				var grille = utils.rotate(utils.rythme(this.grille, this.rythmeGrille), indexGrille)
+				var mel = this.io
 				mel = convert2ly(mel, this.rythmeMel, this.duration)
-				console.log(grille)
 				grille = convert2ly(grille, this.rythmeGrille, this.duration)
-				console.log(grille)
 				this.getLilypond(mel, grille)
 			},
 			getLilypond (mel, basse) {
@@ -153,48 +145,6 @@
 				this.mel = tmp
 			}
 		},
-		filters: {
-			add,
-			until,
-			rythme,
-			inverse (grille, bool) {
-				if (bool) {
-					var res = ''
-					for (var i = grille.length - 1; i >= 0; i--) {
-						res += grille[i]
-					}
-					return res
-				} else {
-					return grille
-				}
-			},
-			reverse (grille, bool) {
-				if (bool) {
-					var intervalles = [parseInt(grille[0])]
-					for (var i = 1; i < grille.length; i++) {
-						var lettre = parseInt(grille[i])
-						var lettreAvant = parseInt(grille[i - 1])
-						intervalles.push(lettre - lettreAvant)
-					}
-					var res = intervalles.reduce((a, b) => {
-						var note = 0
-						if (!Array.isArray(a)) {
-							note = a - b
-							if (note < 0) { note += 7 }
-						  return [a].concat(note)
-						}	else {
-							note = a[a.length - 1] - b
-							if (note < 0) { note += 7 }
-							return a.concat(note)
-						}
-					})
-					if (res.length > 0) {
-						return res.join().replace(/,/g, '')
-					}
-				} else {
-					return grille
-				}
-			}
-		}
+		filters: utils
 	}
 </script>

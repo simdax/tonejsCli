@@ -43,3 +43,43 @@ export function until (grille, dur) {
 				}
 				return res
 			}
+
+export function inverse (grille, bool) {
+				if (bool) {
+					var res = ''
+					for (var i = grille.length - 1; i >= 0; i--) {
+						res += grille[i]
+					}
+					return res
+				} else {
+					return grille
+				}
+			}
+
+export function reverse (grille, bool) {
+				if (bool) {
+					var intervalles = [parseInt(grille[0])]
+					for (var i = 1; i < grille.length; i++) {
+						var lettre = parseInt(grille[i])
+						var lettreAvant = parseInt(grille[i - 1])
+						intervalles.push(lettre - lettreAvant)
+					}
+					var res = intervalles.reduce((a, b) => {
+						var note = 0
+						if (!Array.isArray(a)) {
+							note = a - b
+							if (note < 0) { note += 7 }
+						  return [a].concat(note)
+						}	else {
+							note = a[a.length - 1] - b
+							if (note < 0) { note += 7 }
+							return a.concat(note)
+						}
+					})
+					if (res.length > 0) {
+						return res.join().replace(/,/g, '')
+					}
+				} else {
+					return grille
+				}
+			}

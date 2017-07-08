@@ -9,7 +9,6 @@ melody = \relative c'' {
 }
 
 text = \lyricmode {
-  Aaa Bee Cee Dee
 }
 
 upper = \relative c'' {
