@@ -6,13 +6,24 @@ import VueX from 'vuex'
 import App from './App'
 import router from './router'
 
-import {findKey} from 'lodash'
+import {populate, setPart, setMidi} from '@/components/stats/populate'
+import {findKey, filter} from 'lodash'
 
 Vue.use(VueX)
 
 // global interface to app
 const store = new VueX.Store({
+	state: {
+		midi: {},
+		parts: []
+	},
 	getters: {
+		parts (s) {
+			return s.parts
+		},
+		midi (s) {
+			return s.midi
+		},
 		timbres (s) {
 			var res = []
 			for (var key in s.timbres) {
@@ -24,6 +35,10 @@ const store = new VueX.Store({
 		}
 	},
 	mutations: {
+		SET_MIDI (s, val) {
+			console.log(val)
+			s.midi = val
+		},
 		ADD_TIMBRE (s, index) {
 			var timbre = require('./stores/instruments').default
 			store.registerModule(['timbres', s.timbres.nb], timbre)
@@ -35,6 +50,9 @@ const store = new VueX.Store({
 		}
 	},
 	actions: {
+		populate,
+		setPart,
+		setMidi,
 		addTimbre ({getters, commit}) {
 			commit('ADD_TIMBRE', getters.lastIndex + 1)
 		},
@@ -53,13 +71,17 @@ const store = new VueX.Store({
   				return (hash) => {
 						return findKey(s, (v) => { return v.hash === hash })
 					}
+				},
+				synths (s) {
+					return filter(s, (val, key) => {
+						return (key !== 'nb')
+					}).map(v => { return v.toneSynth })
 				}
 			},
 			actions: {
 				setTimbre ({getters, dispatch}, {hash, val}) {
 					var index = getters.findHash(hash)
-					console.log(hash)
-					console.log(index)
+					console.log(hash, val)
 					dispatch(index + '/set', val)
 				}
 			},

@@ -8,7 +8,6 @@ import filter from '@/components/timbre/freeverb'
 import harmonisation from '@/components/harmonisation/main'
 import samples from '@/components/samples/main.vue'
 import stat from '@/components/stats/main.vue'
-import routerStats from '../components/stats/router'
 
 Vue.use(Router)
 
@@ -43,8 +42,7 @@ export default new Router({
     },
     {
       path: '/stat',
-      component: stat,
-      children: [routerStats]
+      component: stat
     },
     {
       path: '*',

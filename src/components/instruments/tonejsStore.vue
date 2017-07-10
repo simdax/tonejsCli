@@ -1,21 +1,31 @@
 <template>
-
 	<div>
     <button @click='addTimbre'> add new timbre</button>
     <div v-for="timbre in timbres">
-      {{timbre.synth}}
+      {{timbre.timbre}}
+      <samples class="samples" @input='setTimbre({hash: timbre.hash, val: $event})'/>
       <button @click='delTimbre(timbre.hash)'> del timbre</button>
-      <input @change="setTimbre({hash: timbre.hash, val:$event.target.value})">
     </div>
 	</div>
-
 </template>
+
+<style>
+  .samples{
+    display: inline-block;
+    color: red;
+    width: 50%;
+  }
+</style>
 
 <script>
 	import {mapGetters as get, mapActions as actions} from 'vuex'
+  import samples from '@/components/samples/main.vue'
   export default {
+    components: {samples},
     name: 'tonejsStore',
-    computed: get(['timbres']),
+    computed: {
+      ...get(['timbres'])
+    },
     methods: {
       ...actions(['addTimbre', 'delTimbre']),
       ...actions('timbres', ['setTimbre'])
@@ -25,6 +35,3 @@
     }
   }
 </script>
-
-<style lang="css" scoped>
-</style>

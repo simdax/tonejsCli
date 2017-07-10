@@ -1,7 +1,7 @@
 <template>	
 <div>
 	<header>
-		<instruments @instrument="setTimbre($event)"></instruments>
+		<instruments></instruments>
 		<div class="inputs">		
 			<div>			
 				<input type="telefon" v-model='grille'>
@@ -14,13 +14,6 @@
 				<input type="number" v-model.number="duration">
 			</div>
 		</div>	
-<!-- 				{{melodie}}
-				{{accords}}
- -->	
-<!--  {{basse}}
- <br>
-	{{merged}}
- --> 
  </header>
 	<main>
 		<div class="inversions">
@@ -30,16 +23,20 @@
 			<setting titre="reverse mel" v-model='melReverseBool'></setting>		
 		</div>
 		<div id="stats">
-			<router-view 
+			<tab 
 				class='io'
 				v-for = 'n in 7' :key=" n + 'stats_' "
 				:transpose='n'
 				:grille="accords"
 				:mel= "melodie | add(n-1)"
 				@select = "print($event)"
-			><sub>harmo</sub>\<sup>mel</sup></router-view>
+			><sub>harmo</sub>\<sup>mel</sup>
+			</tab>
 		</div> 
 	</main>
+	<div class='log'>				
+		<midi ref='midi'></midi>
+	</div>
 	<partition>	
 		<footer>				
 			<div id="partition"></div>	
@@ -105,17 +102,20 @@
 
 <script>
 
-	import instruments from '../samples/main.vue'
+	import {mapActions} from 'vuex'
+	import instruments from '../instruments/tonejsStore.vue'
+	import midi from './midi'
 	import axios from 'axios'
 	import * as utils from './utils'
 	import {convert2ly} from './lilypond'
 	import {createChords, merge, addArray, rotate} from './lilypond_accords'
+	import tab from './tab'
 	import midiButton from './midiButton.vue'
 	import setting from './setting.vue'
 	import partition from './partition.vue'
 
 	export default {
-		components: {setting, midiButton, partition, instruments},
+		components: {setting, midiButton, partition, instruments, midi, tab},
 		data () {
 			return {
 				duration: 16,
@@ -148,9 +148,7 @@
 			}
 		},
 		methods: {
-			setTimbre (e) {
-				console.log(e)
-			},
+			...mapActions(['setMidi']),
 			filter (mel, rythme, reverse, inverse) {
 				var res = mel
 				// console.log('mel', res)
@@ -177,13 +175,20 @@
 				var accords = convert2ly(rotate(this.merged, indexGrille))
 				this.getLilypond(mel, grille, accords, addArray)
 			},
+			populateMidi () {
+				axios.get('/lilypond/midi').then((res) => {
+					this.setMidi(res.data)
+					// this.$store.state.midi = res.data
+					// this.populate()
+				})
+			},
 			getLilypond (mel, basse, accords) {
 				var div = document.querySelector('#partition')
 				div.innerHTML = 'loading'
 				axios.post('/lilypond', {
 					mel, basse, accords
 				}).then(response => {
-					// console.log(response)
+					this.populateMidi()
 					this.createSVG(response.data)
 				})
 			},

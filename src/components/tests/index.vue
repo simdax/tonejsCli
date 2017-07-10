@@ -1,6 +1,5 @@
 <template>
 <div>
-	<samples v-model='instrument'/>
 	<tonejsStore></tonejsStore>
 </div>
 </template>
@@ -10,8 +9,6 @@
 import samples from '@/components/samples/main.vue'
 var res = {}
 var deps = `
-coucou, orchestre,
-tonejsStore,
 @/components/container/index',
 falseApp
 `.split(',').map(v => { return v.trim() })
@@ -33,13 +30,16 @@ for (var i = 0; i < deps.length; i++) {
 
 export default {
 	components: {...res, samples},
-  name: 'index',
-  // methods
-  data () {
-    return {
-    	instrument: ''
-    }
-  }
+	computed: {
+		instrument: {
+			get (v) {
+				//
+			},
+			set (v) {
+				this.$store.dispatch('timbres/0/set', v)
+			}
+		}
+	}
 }
 </script>
 

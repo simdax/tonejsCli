@@ -7,6 +7,7 @@ var MidiConvert = require('midiconvert')
 // const lilypond = require ('../lilypond') 
 
 routes.post('/lilypond', function(req, res, next){
+	console.log('yououou ???')
 	var mel = req.body.mel
 	var basse = req.body.basse
 	var accords = req.body.accords
@@ -34,6 +35,7 @@ routes.post('/lilypond', function(req, res, next){
 })
 
 routes.get('/lilypond/midi', function (req, res, next) {
+	console.log('yayaya')
 	fs.readFile("lilypond/tmp.midi", "binary", function(err, midiBlob) {
 	  if (!err) {
 	    var midi = MidiConvert.parse(midiBlob)

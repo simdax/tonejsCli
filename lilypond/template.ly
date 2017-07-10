@@ -27,7 +27,7 @@ lower = {
 
 \score {
   <<
-  \new ChordNames {
+  \new ChordNames = "ChordNames" {
     \set chordChanges = ##t
     \basse
   }
@@ -47,7 +47,7 @@ lower = {
         \consists "Completion_rest_engraver"
         }  \upper
       }
-    \new Staff = "lower"  {
+    \new Staff = "basse"  {
       \new Voice \with { 
         \remove "Note_heads_engraver"
         \consists "Completion_heads_engraver"
