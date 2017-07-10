@@ -31,7 +31,7 @@ function notation (mel, index) {
 import {isEqual} from 'lodash'
 
 export function convert2ly (grille) {
-	console.log(grille)
+	// console.log(grille)
 	var res = ''
 	for (var i = 0; i < grille.length; i++) {
 		var count = 0

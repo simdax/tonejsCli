@@ -21,7 +21,7 @@
 <script>
 
 import Tone from 'tone'
-import store from '../store'
+import store from '../../store'
 import input from './input.vue'
 import {createMel, setComputed, playNote} from './doMel'
 

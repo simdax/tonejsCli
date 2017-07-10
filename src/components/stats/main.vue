@@ -1,6 +1,7 @@
 <template>	
 <div>
 	<header>
+		<instruments @instrument="setTimbre($event)"></instruments>
 		<div class="inputs">		
 			<div>			
 				<input type="telefon" v-model='grille'>
@@ -104,16 +105,17 @@
 
 <script>
 
+	import instruments from '../samples/main.vue'
 	import axios from 'axios'
 	import * as utils from './utils'
 	import {convert2ly} from './lilypond'
-	import {createChords, merge, addArray} from './lilypond_accords'
+	import {createChords, merge, addArray, rotate} from './lilypond_accords'
 	import midiButton from './midiButton.vue'
 	import setting from './setting.vue'
 	import partition from './partition.vue'
 
 	export default {
-		components: {setting, midiButton, partition},
+		components: {setting, midiButton, partition, instruments},
 		data () {
 			return {
 				duration: 16,
@@ -146,6 +148,9 @@
 			}
 		},
 		methods: {
+			setTimbre (e) {
+				console.log(e)
+			},
 			filter (mel, rythme, reverse, inverse) {
 				var res = mel
 				// console.log('mel', res)
@@ -169,10 +174,12 @@
 				transpose -= 1
 				var mel = convert2ly(utils.add(this.melodie, transpose))
 				var grille = convert2ly(utils.rotate(this.accords, indexGrille))
-				var accords = convert2ly(this.merged.map(array => { return addArray(array, transpose) }))
-				this.getLilypond(mel, grille, accords)
+				var accords = convert2ly(rotate(this.merged, indexGrille))
+				this.getLilypond(mel, grille, accords, addArray)
 			},
 			getLilypond (mel, basse, accords) {
+				var div = document.querySelector('#partition')
+				div.innerHTML = 'loading'
 				axios.post('/lilypond', {
 					mel, basse, accords
 				}).then(response => {

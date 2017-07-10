@@ -21,7 +21,7 @@
 </style>
 
 <script>
-	import generator from '@/components/generator'
+	import generator from './generator'
 	export default {
 		components: {generator},
 		data () {

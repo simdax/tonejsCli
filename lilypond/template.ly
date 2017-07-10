@@ -10,7 +10,7 @@ melody = {
 text = \lyricmode {
 }
 
-upper = \relative c'' {
+upper = \relative c' {
   \clef treble
   \key c \major
   \time 4/4

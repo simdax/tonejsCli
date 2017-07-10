@@ -1,4 +1,4 @@
-function rotate (array, n) {
+export function rotate (array, n) {
 				var dep = array
 				var res = []
 				for (var i = 0; i < dep.length; i++) {
