@@ -46,76 +46,26 @@
 </div>
 </template>
 
-<style>
-
-	.io{
-		width: 30%;
-		/*height: 20%;*/
-	}
-	partition{
-		position: fixed;		
-	}
-	footer{
-		display: flex; 
-		width: 100%;
-		height: 28%;
-		bottom: 0;
-		z-index: 1;
-		background-color: white;
-		overflow: scroll;
-	}
-	.settings{
-		display: flex;
-		justify-content: center;
-		margin: 5px
-	}
-
-	.inputs{
-		display: flex;
-		flex-flow: column;
-		align-items: center;
-		justify-content: center;
-		margin: 5px
-	}
-	.inputs #rythmes{
-		display: flex;
-	}
-
-	.inversions{
-		display: flex;
-		justify-content: center;
-	}
-	#stats{
-		height: 60%;
-		display: flex;
-		flex-flow: row wrap;
-		align-items: center;
-		justify-content: center;
-	}
-	#stats > *{
-		/*width: 49%;*/
-		border: 1px solid; 
-		/*height: 150px;*/
-	}
-
-</style>
-
 <script>
 
 	import {mapActions} from 'vuex'
-	import instruments from '../instruments/tonejsStore.vue'
-	import midi from './midi'
-	import axios from 'axios'
-	import * as utils from './utils'
-	import {convert2ly} from './lilypond'
-	import {createChords, merge, addArray, rotate} from './lilypond_accords'
+
+	// vues
+	import instruments from '../instruments/tonejsStore'
+	import midiButton from './midiButton'
+	import setting from './setting'
+	import partition from './partition'
 	import tab from './tab'
-	import midiButton from './midiButton.vue'
-	import setting from './setting.vue'
-	import partition from './partition.vue'
+	import midi from './midi'
+	let	components = {setting, midiButton, partition, instruments, midi, tab}
+	
+	// utils
+	import * as utils from './utils'
+	import {createChords, merge} from './lilypond_accords'
+	import print from './getLilypond'
 
 	export default {
-		components: {setting, midiButton, partition, instruments, midi, tab},
+		components,
 		data () {
 			return {
 				duration: 16,
@@ -149,6 +99,7 @@
 		},
 		methods: {
 			...mapActions(['setMidi']),
+			print,
 			filter (mel, rythme, reverse, inverse) {
 				var res = mel
 				// console.log('mel', res)
@@ -168,34 +119,6 @@
 				}
 				return res
 			},
-			print ({indexGrille, transpose}) {
-				transpose -= 1
-				var mel = convert2ly(utils.add(this.melodie, transpose))
-				var grille = convert2ly(utils.rotate(this.accords, indexGrille))
-				var accords = convert2ly(rotate(this.merged, indexGrille))
-				this.getLilypond(mel, grille, accords, addArray)
-			},
-			populateMidi () {
-				axios.get('/lilypond/midi').then((res) => {
-					this.setMidi(res.data)
-					// this.$store.state.midi = res.data
-					// this.populate()
-				})
-			},
-			getLilypond (mel, basse, accords) {
-				var div = document.querySelector('#partition')
-				div.innerHTML = 'loading'
-				axios.post('/lilypond', {
-					mel, basse, accords
-				}).then(response => {
-					this.populateMidi()
-					this.createSVG(response.data)
-				})
-			},
-			createSVG (string) {
-				var div = document.querySelector('#partition')
-				div.innerHTML = string
-			},
 			swap () {
 				var tmp = this.grille
 				this.grille = this.mel
@@ -207,3 +130,5 @@
 		}
 	}
 </script>
+
+<style src='./mainStyle.css'></style>

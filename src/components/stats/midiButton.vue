@@ -21,7 +21,6 @@
 		},
 		methods: {
 			play () {
-				console.log(this.parts)
 				if (this.isPlaying) {
 					Tone.Transport.cancel()
 				} else {

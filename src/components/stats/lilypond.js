@@ -8,7 +8,7 @@ function createNote (pitch) {
 		}
 		note += '>'
 	} else {
-		note = 'cdefgab'[pitch]
+		note = 'cdefgab'[pitch % 7]
 	}
 	return note
 }
@@ -17,7 +17,11 @@ function notation (mel, index) {
 	var note
 	if (Array.isArray(mel)) {
 		note = createNote(mel)
-	}	else { note = createNote(parseInt(mel)) }
+	}	else {
+	 	// console.log(mel)
+	  note = createNote(parseInt(mel))
+		// console.log(note)
+	}
 	// okay okay .......
 	var rules = [`${note}16`,
 							 `${note}8`, `${note}8.`,
@@ -40,6 +44,7 @@ export function convert2ly (grille) {
 			count++; i++
 		}
 		res += notation(grille[i], count) + ' '
+		// console.log(res)
 	}
 	return '{ ' + res + '}'
 }
