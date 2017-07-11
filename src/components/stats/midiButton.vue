@@ -4,7 +4,7 @@
 
 <script>
 
-	import Tone from 'tone'
+	// import Tone from 'tone'
 	import {mapGetters} from 'vuex'
 
 	export default {
@@ -22,10 +22,15 @@
 		methods: {
 			play () {
 				if (this.isPlaying) {
-					Tone.Transport.cancel()
+					// Tone.Transport.cancel()
+					this.parts.map(v => {
+	     			v.stop()
+					})
 				} else {
-					Tone.Transport.start()
-					this.parts.map(v => { v.start() })
+					// Tone.Transport.start()
+					this.parts.map(v => {
+	     			v.start()
+					})
 				}
 				this.isPlaying	= !this.isPlaying
 			}

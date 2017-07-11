@@ -1,37 +1,44 @@
 import Tone from 'tone'
 import {isEmpty} from 'lodash'
 
-export function setMidi (s, midi) {
+/* eslint-disable padded-blocks */
+export function setMidi (s, {midi, dur}) {
+
 	s.commit('SET_MIDI', midi)
+  Tone.Transport.bpm.value = s.state.midi.header.bpm
+  Tone.Transport.start()
+
 	if (isEmpty(s.state.parts)) {
-		console.log('on populate')
+		// console.log('on populate')
 		s.dispatch('populate')
 	} else {
-		console.log('on set on the fly')
-		s.dispatch('setPart')
+		// console.log('on set on the fly')
+		s.dispatch('setPart', dur)
 	}
 }
 
-export function setPart ({state}) {
-	  for (var i = 0; i < state.midi.tracks.length; i++) {
+export function setPart ({state}, dur) {
+	// console.log(state, dur)
+	// here's
+	  for (var i = 2; i < state.midi.tracks.length; i++) {
 	  	var track = state.midi.tracks[i]
-			var part = state.parts[i]
+			var part = state.parts[i - 2]
+			// console.log(track, part, state.midi, state.parts, i)
 			part.removeAll()
   		for (var j = 0; j < track.notes.length; j++) {
   			part.add(track.notes[j])
   		}
+  		part.loopEnd = `16n * ${dur}`
   	}
 }
 
 export function	populate (s) {
-	// state.parts.splice(0)
-	// console.log(state, getters)
-  Tone.Transport.bpm.value = s.state.midi.header.bpm
-  Tone.Transport.start()
-  for (var i = 0; i < s.state.midi.tracks.length; i++) {
+  // we avoid the first two tracks
+  //  control and chord names
+  for (var i = 2; i < s.state.midi.tracks.length; i++) {
   	!(function (i) {
   		var part = new Tone.Part((time, note) => {
-	  		var synth = this.getters['timbres/synths'][i]
+	  		var synth = this.getters['timbres/synths'][i - 2]
 		  	var pitch = note.name
 		  	if (synth instanceof Tone.Sampler) {
 			  	pitch = Tone.Frequency(note.name).toMidi() - 60

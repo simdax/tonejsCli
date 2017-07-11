@@ -1,8 +1,8 @@
 
-import {convert2ly} from './lilypond'
-import {addArray, rotate} from './lilypond_accords'
+import convert2ly from './convert2ly'
+import {addArray, rotate} from './accords'
 import axios from 'axios'
-import {add as add2, rotate as rotate2} from './utils'
+import {add as add2, rotate as rotate2} from '../utils'
 
 // import {mapActions} from 'vuex'
 // let setMidi = mapActions(['setMidi']).setMidi
@@ -30,7 +30,8 @@ function getLilypond (mel, basse, accords) {
 
 function populateMidi () {
 				axios.get('/lilypond/midi').then((res) => {
-					this.setMidi(res.data)
+					// I use also the 'this' duration option
+					this.setMidi({midi: res.data, dur: this.duration})
 				})
 			}
 

@@ -1,13 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import App from '@/App'
-import tests from '@/components/tests/index.vue'
-import timbre from '@/components/timbre/main'
-import filter from '@/components/timbre/freeverb'
-import harmonisation from '@/components/harmonisation/main'
-import samples from '@/components/samples/main.vue'
-import stat from '@/components/stats/main.vue'
+import App from '#/main/index'
+import tests from '#/tests/index.vue'
+import timbre from '#/timbre/main'
+import filter from '#/timbre/freeverb'
+import harmonisation from '#/harmonisation/main'
+import stat from '#/stats/main'
 
 Vue.use(Router)
 
@@ -27,11 +26,11 @@ export default new Router({
       name: 'testSon',
       component: timbre
     },
-    {
-      path: '/samples',
-      name: 'samples',
-      component: samples
-    },
+    // {
+    //   path: '/samples',
+    //   name: 'samples',
+    //   component: samples
+    // },
     {
       path: '/filter',
       component: filter

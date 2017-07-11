@@ -45,7 +45,7 @@ compiler.plugin('compilation', function (compilation) {
 var bodyParser = require('body-parser')
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json())
-app.use(require('./routes'))
+app.use(require('../lilypond/routes'))
 
 
 // proxy api requests

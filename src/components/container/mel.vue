@@ -5,13 +5,13 @@
     <in v-model='rythme' :placeholder="rythme">rythme</in>
     <in v-model='scale' :placeholder="scale">scale</in>
     <div>      
-      timber
+      <span>timber</span>
       <select v-model="timber" name="" id="" @change="setTimber">
         <option v-for="n in ['AMSynth', 'FMSynth', 'DuoSynth','PluckSynth', 'MembraneSynth', 'MetalSynth']" :value="n" >{{n}}</option>
       </select>
     </div>
     <div>      
-      gain
+      <span>gain</span>
       <input type="range" min="-40" max="10" steps="1" v-model="volume" @input="setGain"></range>
     </div>
     <button ref="but" @click="generate" v-text="state" :style='style'></button>
@@ -21,7 +21,7 @@
 <script>
 
 import Tone from 'tone'
-import store from '../../store'
+import store from '@/stores/mel'
 import input from './input.vue'
 import {createMel, setComputed, playNote} from './doMel'
 
@@ -29,7 +29,7 @@ export default {
   props: ['ns'],
   components: {in: input},
   created () {
-    this.$store.registerModule(this.ns, store)
+    this.$store.registerModule(['mels', this.ns], store)
     this.create()
   },
   data () {
@@ -55,7 +55,7 @@ export default {
       this.setTimber()
       this.sequence = new Tone.Sequence((t, v) => {
         if (v === ',') { return }
-        console.log(this.sequence.subdivision)
+        // console.log(this.sequence.subdivision)
         if (isNaN(parseInt(v))) {
           // means chord
           var chord = [0, 2, 4].map((vv) => {
@@ -65,7 +65,7 @@ export default {
           console.log(chord)
           this.sound.triggerAttackRelease(chord, this.sequence.subdivision)
         } else {
-          console.log('single note')
+          // console.log('single note')
           var freq = playNote.bind(this)(v)
           if (!isNaN(freq)) {
             this.sound.triggerAttackRelease(freq, this.sequence.subdivision)

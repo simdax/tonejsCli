@@ -1,8 +1,9 @@
 var child_process = require('child_process')
 var fs = require('fs')
+var MidiConvert = require('midiconvert')
 
 const lilypond = function(req, res, next){
-	console.log('yououou ???')
+	// console.log('yououou ???')
 	var mel = req.body.mel
 	var basse = req.body.basse
 	var accords = req.body.accords
@@ -28,4 +29,19 @@ const lilypond = function(req, res, next){
 		})
 	})
 }
-module.exports = lilypond
+
+function midi (req, res, next) {
+	// console.log('yayaya')
+	fs.readFile("lilypond/tmp.midi", "binary", function(err, midiBlob) {
+	  if (!err) {
+	    var midi = MidiConvert.parse(midiBlob)
+			// console.log("io", midi)
+	    res.send(midi)
+	  }
+	})
+}
+
+module.exports = {
+	main: lilypond,
+	midi: midi
+}

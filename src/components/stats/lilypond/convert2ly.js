@@ -1,3 +1,5 @@
+import convert from './convertNote'
+
 function createNote (pitch) {
 	var note = ''
 	if (Array.isArray(pitch)) {
@@ -8,7 +10,7 @@ function createNote (pitch) {
 		}
 		note += '>'
 	} else {
-		note = 'cdefgab'[pitch % 7]
+		note = 'cdefgab'[convert(pitch)]
 	}
 	return note
 }
@@ -34,7 +36,7 @@ function notation (mel, index) {
 
 import {isEqual} from 'lodash'
 
-export function convert2ly (grille) {
+export default function convert2ly (grille) {
 	// console.log(grille)
 	var res = ''
 	for (var i = 0; i < grille.length; i++) {

@@ -1,45 +1,21 @@
 <template>
 <div>
-	<tonejsStore></tonejsStore>
+	<tempo></tempo>
+	<instruments></instruments>
+	<generator></generator>
 </div>
 </template>
 
 <script>
 
-import samples from '@/components/samples/main.vue'
-var res = {}
-var deps = `
-@/components/container/index',
-falseApp
-`.split(',').map(v => { return v.trim() })
+import tempo from '#/main/index'
+import instruments from '#/instruments/index'
+import generator from '#/container/index'
 
-for (var i = 0; i < deps.length; i++) {
-	!(function (i) {
-			var tmp
-			// very strange bug
-			if (deps[i][0] === '@') {
-				// console.log(deps[i], deps[i] === '../container/index')
-				tmp = require('../container/index')
-				res[deps[i].split('/')[2]] = tmp
-			} else {
-				tmp = require('./' + deps[i])
-				res[deps[i]] = tmp
-			}
-		}(i))
-}
+var components = {tempo, instruments, generator}
 
 export default {
-	components: {...res, samples},
-	computed: {
-		instrument: {
-			get (v) {
-				//
-			},
-			set (v) {
-				this.$store.dispatch('timbres/0/set', v)
-			}
-		}
-	}
+	components
 }
 </script>
 

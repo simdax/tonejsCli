@@ -51,7 +51,7 @@
 	import {mapActions} from 'vuex'
 
 	// vues
-	import instruments from '../instruments/tonejsStore'
+	import instruments from '#/instruments/index'
 	import midiButton from './midiButton'
 	import setting from './setting'
 	import partition from './partition'
@@ -61,8 +61,8 @@
 	
 	// utils
 	import * as utils from './utils'
-	import {createChords, merge} from './lilypond_accords'
-	import print from './getLilypond'
+	import {createChords, merge} from './lilypond/accords'
+	import print from './lilypond/print'
 
 	export default {
 		components,

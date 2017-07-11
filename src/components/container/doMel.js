@@ -45,10 +45,10 @@ export function setComputed (names) {
         result[name] = {
           get () {
             // console.log('tu te brancles ??', this.$store.state[this.ns][name])
-            return this.$store.state[this.ns][name]
+            return this.$store.state.mels[this.ns][name]
           },
           set (value) {
-            this.$store.commit(this.ns + '/SET_' + name.toUpperCase(), value)
+            this.$store.commit('mels/' + this.ns + '/SET_' + name.toUpperCase(), value)
             this.setSequence()
           }
         }

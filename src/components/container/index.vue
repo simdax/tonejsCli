@@ -1,8 +1,10 @@
 <template>
-	<div id="generator">		
+	<div id="generator">	
+		<button @click="add()">add</button>	
 		<generator
-		 v-for="i in components" :ns='String(i)' :key='i'
-		 @kill="kill($event)"
+			ref="children"
+		  v-for="i in components" :ns='String(i)' :key='i'
+		  @kill="kill($event)"
 		></generator>
 	</div>
 </template>
@@ -21,28 +23,28 @@
 </style>
 
 <script>
-	import generator from './generator'
+	import generator from './mel'
 	export default {
 		components: {generator},
 		data () {
 			return {
-				// list of namespaces for components
+				last: 0,
 				components: [0]
 			}
 		},
 		methods: {
 			add () {
-				// on incremente le dernier
-				var i = this.components[this.components.length - 1]
+				// little trick for FIFO managment
+				var i = this.last = this.components[this.components.length - 1] || this.last
+				// console.log(i)
 				this.components.push(i + 1)
-				// console.log(i + 1)
 			},
 			kill (e) {
-				this.$store.unregisterModule(String(e))
-				var child = this.$children.find(v => { console.log(v.ns, e); return v.ns === e })
-				// console.log(child)
-				// console.log(this.$store._modulesNamespaceMap)
-				this.components.splice(this.$children.indexOf(child), 1)
+				this.$store.unregisterModule(['mels', String(e)])
+				// console.log(this.$store)
+				var child = this.$refs.children.find(v => { return v.ns === e })
+				this.components.splice(this.$refs.children.indexOf(child), 1)
+				console.log('prout')
 			}
 		}
 	}

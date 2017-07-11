@@ -1,12 +1,10 @@
 <template>
   <div id="app">
-    <button id="addCell" @click="$refs.generator.add()">add cell</button>
     <div id="settings">
-      <input type="range" max="200" min="1" v-model='tempo' @input="setTempo">
+      <input type="range" max="200" min="1" v-model='tempo'>
       <button @click="toggle"> stop </button>
       <button @click="panic"> panic </button>
     </div>
-    <container ref="generator"></container>
   </div>
 </template>
 
@@ -24,11 +22,8 @@
 <script>
 
 import Tone from 'tone'
-import container from '@/components/container/index.vue'
-global.t = Tone
 
 export default {
-  components: {container},
   name: 'app',
   data () {
     return {
@@ -37,13 +32,15 @@ export default {
   },
   computed: {
     children () {
-      return this.$refs.generator.$children
+      return this.$store.getters.mels
+    }
+  },
+  watch: {
+    tempo () {
+      Tone.Transport.bpm.value = this.tempo
     }
   },
   methods: {
-    setTempo () {
-      Tone.Transport.bpm.value = this.tempo
-    },
     stop () {
       for (var i = 0; i < this.children.length; i++) {
         var child = this.children[i]
@@ -85,6 +82,14 @@ export default {
 </script>
 
 <style>
+  #settings{
+     background: url(../../assets/logo.png);
+     /*position: absolute;*/
+     top: 0;
+     height: 150px;
+     width: 50%;
+     margin: auto;
+  }
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
