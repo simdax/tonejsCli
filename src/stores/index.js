@@ -1,6 +1,7 @@
 
 import {populate, setPart, setMidi} from './populate'
 import {findKey, filter} from 'lodash'
+import Tone from 'tone'
 
 import Vue from 'vue'
 import VueX from 'vuex'
@@ -30,11 +31,21 @@ const store = new VueX.Store({
 	},
 	mutations: {
 		SET_MIDI (s, val) {
-			console.log(val)
 			s.midi = val
 		},
+		SET_TIMBRE ({commit}, {synth, mel}) {
+			commit(`mels/${mel}/SET_TIMBRE`, synth)
+		},
+		ADD_MEL (s, index) {
+			var mel = require('./mels').default
+			store.registerModule(['mels', index], mel)
+		},
+		DEL_MEL (s, ns) {
+			// var index = findKey(s.timbres, (v) => { return v.hash === hash })
+			store.unregisterModule(['mels', String(ns)])
+		},
 		ADD_TIMBRE (s, index) {
-			var timbre = require('./instruments').default
+			var timbre = require('./timbres').default
 			store.registerModule(['timbres', s.timbres.nb], timbre)
 			s.timbres.nb++
 		},
@@ -59,7 +70,24 @@ const store = new VueX.Store({
 	},
 	modules: {
 		mels: {
-			namespaced: true
+			namespaced: true,
+			getters: {
+				// parts (s, getters) {
+				// 	console.log('oui???')
+				// 	var res = []
+				// 	for (var key in s) {
+				// 		res.push(getters[key + '/part'])
+				// 	}
+				// 	return res
+				// },
+				partsForSynthIndex (s, getters) {
+					console.log(s)
+					return (index) => {
+						console.log(s)
+						return filter(s, v => { return v.indexTimbre === index })
+					}
+				}
+			}
 		},
 		timbres: {
 			namespaced: true,
@@ -70,16 +98,17 @@ const store = new VueX.Store({
 					}
 				},
 				synths (s) {
-					return filter(s, (val, key) => {
+					var res = filter(s, (val, key) => {
 						return (key !== 'nb')
 					}).map(v => { return v.toneSynth })
+					return res.length === 0 ? [new Tone.Synth().toMaster()] : res
 				}
 			},
 			actions: {
-				setTimbre ({getters, dispatch}, {hash, val}) {
-					var index = getters.findHash(hash)
-					// console.log(hash, val)
-					dispatch(index + '/set', val)
+				setTimbre ({getters, dispatch, rootGetters}, {hash, index, val}) {
+					var indexHash = getters.findHash(hash)
+					dispatch(indexHash + '/set', val)
+					console.log(rootGetters['mels/partsForSynthIndex'](index))
 				}
 			},
 			state: {

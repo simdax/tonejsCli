@@ -22,8 +22,8 @@ const lilypond = function(req, res, next){
 			// console.log(err, stdout)
 			if (!err) {
 				fs.readFile(outName+'.svg', 'utf8', (err, data) => {
-					// console.log(data)
-					res.send(data)
+					var svg = data
+					res.send(svg)
 				})
 			}
 		})

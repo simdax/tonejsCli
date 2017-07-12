@@ -22,6 +22,7 @@
 <script>
 
 import Tone from 'tone'
+import {mapGetters} from 'vuex'
 
 export default {
   name: 'app',
@@ -31,9 +32,9 @@ export default {
     }
   },
   computed: {
-    children () {
-      return this.$store.getters.mels
-    }
+    ...mapGetters('mels', {
+      children: 'parts'
+    })
   },
   watch: {
     tempo () {
@@ -51,7 +52,7 @@ export default {
     all () {
       for (var i = 0; i < this.children.length; i++) {
         var child = this.children[i]
-        child.play()
+        child.start()
       }
     },
     toggle () {
@@ -59,7 +60,8 @@ export default {
       loop: {
         for (var i = 0; i < this.children.length; i++) {
           var child = this.children[i]
-          if (child.sequence.state === 'stopped') {
+          if (child.state === 'stopped') {
+            Tone.Transport.start()
             this.all()
             break loop
           }
@@ -72,10 +74,10 @@ export default {
       Tone.context.close()
       Tone.context = new AudioContext()
       Tone.Transport.stop()
-      for (var i = 0; i < this.children.length; i++) {
-        var child = this.children[i]
-        child.create()
-      }
+      // for (var i = 0; i < this.children.length; i++) {
+      //   var child = this.children[i]
+      //   child.create()
+      // }
     }
   }
 }
@@ -83,12 +85,12 @@ export default {
 
 <style>
   #settings{
-     background: url(../../assets/logo.png);
-     /*position: absolute;*/
-     top: 0;
-     height: 150px;
-     width: 50%;
-     margin: auto;
+    background: url(../../assets/logo.svg);
+    background-size: contain;
+    top: 0;
+    height: 150px;
+    width: 50%;
+    margin: auto;
   }
   #app {
     font-family: 'Avenir', Helvetica, Arial, sans-serif;

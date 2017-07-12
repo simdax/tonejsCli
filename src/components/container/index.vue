@@ -1,6 +1,6 @@
 <template>
 	<div id="generator">	
-		<button @click="add()">add</button>	
+		<button @click="add">add</button>	
 		<generator
 			ref="children"
 		  v-for="i in components" :ns='String(i)' :key='i'
@@ -24,15 +24,17 @@
 
 <script>
 	import generator from './mel'
+	import {mapActions} from 'vuex'
 	export default {
 		components: {generator},
 		data () {
 			return {
 				last: 0,
-				components: [0]
+				components: []
 			}
 		},
 		methods: {
+			...mapActions('mels', ['remove']),
 			add () {
 				// little trick for FIFO managment
 				var i = this.last = this.components[this.components.length - 1] || this.last
@@ -40,11 +42,8 @@
 				this.components.push(i + 1)
 			},
 			kill (e) {
-				this.$store.unregisterModule(['mels', String(e)])
-				// console.log(this.$store)
 				var child = this.$refs.children.find(v => { return v.ns === e })
 				this.components.splice(this.$refs.children.indexOf(child), 1)
-				console.log('prout')
 			}
 		}
 	}

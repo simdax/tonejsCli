@@ -60,7 +60,7 @@
 	let	components = {setting, midiButton, partition, instruments, midi, tab}
 	
 	// utils
-	import * as utils from './utils'
+	import * as utils from '@/utils'
 	import {createChords, merge} from './lilypond/accords'
 	import print from './lilypond/print'
 

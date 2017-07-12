@@ -1,3 +1,6 @@
+export function string2array (string) {
+	return string.split(',').map(v => { return parseInt(v) })
+}
 
 export function format (note) {
 				return (Math.sign(note) === -1 ? (note + 7) : note) % 7

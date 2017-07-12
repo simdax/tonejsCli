@@ -63,7 +63,7 @@
 
 <script>
 
-	import {format, formatString, rotate} from './utils'
+	import {format, formatString, rotate} from '@/utils'
 
 	export default {
 		props: ['grille', 'mel', 'transpose'],

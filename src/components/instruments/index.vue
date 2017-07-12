@@ -1,9 +1,9 @@
 <template>
 	<div>
     <button @click='addTimbre'> add new timbre</button>
-    <div v-for="timbre in timbres">
+    <div v-for="timbre,k in timbres">
       {{timbre.timbre}}
-      <samples class="samples" @input='setTimbre({hash: timbre.hash, val: $event})'/>
+      <samples class="samples" @input='setTimbre({index: k, hash: timbre.hash, val: $event})'/>
       <button @click='delTimbre(timbre.hash)'> del timbre</button>
     </div>
 	</div>

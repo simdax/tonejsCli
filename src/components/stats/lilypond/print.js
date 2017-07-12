@@ -2,7 +2,8 @@
 import convert2ly from './convert2ly'
 import {addArray, rotate} from './accords'
 import axios from 'axios'
-import {add as add2, rotate as rotate2} from '../utils'
+import $ from 'jquery'
+import {add as add2, rotate as rotate2} from '@/utils'
 
 // import {mapActions} from 'vuex'
 // let setMidi = mapActions(['setMidi']).setMidi
@@ -36,7 +37,11 @@ function populateMidi () {
 			}
 
 function createSVG (string) {
-				var div = document.querySelector('#partition')
-				div.innerHTML = string
+				var svg = $(string)
+				// svg.attr('width', 200)
+				// svg.attr('height', 150)
+				// svg.attr('viewBox', '0 0 250 300')
+				svg.find('text:last-child').remove()
+				$('#partition').empty().append(svg)
 			}
 

@@ -1,7 +1,9 @@
 import Tone from 'tone'
 import {isEmpty} from 'lodash'
 
+// WTF padded blocks ???
 /* eslint-disable padded-blocks */
+
 export function setMidi (s, {midi, dur}) {
 
 	s.commit('SET_MIDI', midi)
@@ -9,10 +11,8 @@ export function setMidi (s, {midi, dur}) {
   Tone.Transport.start()
 
 	if (isEmpty(s.state.parts)) {
-		// console.log('on populate')
 		s.dispatch('populate')
 	} else {
-		// console.log('on set on the fly')
 		s.dispatch('setPart', dur)
 	}
 }
