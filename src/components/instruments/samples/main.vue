@@ -10,10 +10,10 @@
 			<ul v-if='deploy' class="list up">
 				<li @click='current += 5' class="fleches">previous</li>
 				<li 
-					v-for='(func, url, k) in db' @click='$emit("input",url); deploy = !deploy'
+					v-for='(bool, url, k) in db' @click='$emit("input",url); deploy = !deploy'
 					v-if ='current < k && k < limit'
 				> 
-					{{url.split('/')[4].replace('.wav', '')}}
+					{{url.split('/')[3].replace('.wav', '')}}
 				</li>
 				<li @click='current += 5' class="fleches">next</li>
 			</ul>

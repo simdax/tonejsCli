@@ -1,6 +1,6 @@
 
 import {populate, setPart, setMidi} from './populate'
-import {findKey, filter} from 'lodash'
+import {findKey, filter, isEmpty} from 'lodash'
 import Tone from 'tone'
 
 import Vue from 'vue'
@@ -26,7 +26,7 @@ const store = new VueX.Store({
 					res.push(s.timbres[key])
 				}
 			}
-			return res
+			return !(isEmpty(res)) ? res : [new Tone.Synth().toMaster()]
 		}
 	},
 	mutations: {
@@ -34,7 +34,7 @@ const store = new VueX.Store({
 			s.midi = val
 		},
 		SET_TIMBRE ({commit}, {synth, mel}) {
-			commit(`mels/${mel}/SET_TIMBRE`, synth)
+			commit(`mels/${mel}/SET_SYNTH`, synth)
 		},
 		ADD_MEL (s, index) {
 			var mel = require('./mels').default

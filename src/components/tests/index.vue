@@ -10,7 +10,7 @@
 
 import tempo from '#/main/index'
 import instruments from '#/instruments/index'
-import generator from '#/container/index'
+import generator from '#/mel/index'
 
 var components = {tempo, instruments, generator}
 

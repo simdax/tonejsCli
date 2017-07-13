@@ -7,24 +7,13 @@ let state = () => {
 		toneSynth: new Tone.Synth().toMaster()
 	}
 }
-// let getters = {
-// 	timbre (s) {
-// 		return s.timbre
-// 	},
-// 	hash (s) {
-// 		return s.hash
-// 	},
-// 	synth (s) {
-// 		return s.toneSynth
-// 	}
-// }
 
 let mutations = {
 	SET_TIMBRE (s, val) {
 		s.timbre = val
 	},
 	SET_TONE (s, val) {
-		if (val.slice(0, 4) === 'http') {
+		if (val.slice(0, 7) === '/static') {
 			s.toneSynth = new Tone.Sampler(val, () => {
 				console.log('chargé ', val)
 			}).toMaster()

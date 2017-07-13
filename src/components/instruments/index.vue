@@ -19,7 +19,7 @@
 
 <script>
 	import {mapGetters as get, mapActions as actions} from 'vuex'
-  import samples from '@/components/samples/main.vue'
+  import samples from './samples/main.vue'
   export default {
     components: {samples},
     name: 'tonejsStore',

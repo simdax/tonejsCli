@@ -15,6 +15,11 @@ new Vue({
   store,
   router,
   template: `
+  <div>
+	  <div   v-for="route in $router.options.routes">
+			<router-link :to='route.path'>{{route.path}}</router-link>
+	  </div>
 		<router-view></router-view>
+  </div>
   `
 })

@@ -6,6 +6,7 @@ import tests from '#/tests/index.vue'
 import timbre from '#/timbre/main'
 import filter from '#/timbre/freeverb'
 import harmonisation from '#/harmonisation/main'
+import instruments from '#/instruments/index'
 import stat from '#/stats/main'
 
 Vue.use(Router)
@@ -26,11 +27,10 @@ export default new Router({
       name: 'testSon',
       component: timbre
     },
-    // {
-    //   path: '/samples',
-    //   name: 'samples',
-    //   component: samples
-    // },
+    {
+      path: '/instruments',
+      component: instruments
+    },
     {
       path: '/filter',
       component: filter

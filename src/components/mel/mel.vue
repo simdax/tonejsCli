@@ -1,27 +1,27 @@
 <template>
   <div class="generator">
     <div class="close" @click="kill">X</div>
-    <in v-model='mel' :placeholder="mel" >mel</in>
+     <in v-model='mel' :placeholder="mel" >mel</in>
     <in v-model='rythme' :placeholder="rythme">rythme</in>
     <in v-model='scale' :placeholder="scale">scale</in>
     <div>      
       <span>timber</span>
-      <select v-model="synth" @change='setTimbre'>
+      <select v-model="indexTimbre">
         <option v-for="timbre,k in timbres" :value="k" >{{k}}</option>
       </select>
     </div>
     <div>      
       <span>gain</span>
-      <input type="range" min="-40" max="10" steps="1" v-model="volume"></range>
+      <input type="range" min="-40" max="10" steps="1" v-model="volume"/>
     </div>
-    <button ref="but" @click="toggle" v-text="isPlaying" :style='style'></button>
+    <button ref="but" @click="toggle" v-text="isPlaying" :style='style'/>
   </div>
 </template>
 
 <script>
 
 import {mapGetters} from 'vuex'
-import input from './input.vue'
+import input from '#/general/input.vue'
 import setComputed from './setComputed'
 
 export default {
@@ -40,7 +40,7 @@ export default {
     // hence there is no way to give the prop value to
     // define a namespace, I have to tweek with a outter
     // function
-    ...setComputed('mel,rythme,scale,volume'.split(',')),
+    ...setComputed('indexTimbre,mel,rythme,scale,volume'.split(',')),
     isPlaying () {
       return this.$store.getters[`mels/${this.ns}/isPlaying`]
     },

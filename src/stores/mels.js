@@ -63,12 +63,11 @@ export default {
 			return (time) => {
 				var seq = getters.sequence
 				var val = seq[state.counter % seq.length]
-				var synth = state.synth
+				var synth = rootState.timbres[state.indexTimbre].toneSynth // state.synth
 				var n = !(synth instanceof Tone.Sampler)
 					? toNote(state.root, string2array(state.scale), parseInt(val))
 					: parseInt(val)
 				state.counter++
-				console.log('TA MERE')
 				synth.triggerAttackRelease(n, 1)
 			}
 		}
@@ -94,6 +93,9 @@ export default {
 		},
 		SET_MEL (s, val) {
 			s.mel = val
+		},
+		SET_INDEXTIMBRE (s, val) {
+			s.indexTimbre = val
 		},
 		SET_RYTHME (s, val) {
 			s.rythme = val
