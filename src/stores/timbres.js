@@ -1,40 +1,29 @@
 import Tone from 'tone'
-
-let state = () => {
-	return {
-		hash: Math.random(),
-		timbre: 'synth',
-		toneSynth: new Tone.Synth().toMaster()
-	}
-}
-
-let mutations = {
-	SET_TIMBRE (s, val) {
-		s.timbre = val
-	},
-	SET_TONE (s, val) {
-		if (val.slice(0, 7) === '/static') {
-			s.toneSynth = new Tone.Sampler(val, () => {
-				console.log('chargé ', val)
-			}).toMaster()
-		} else {
-			s.toneSynth = new Tone[val]().toMaster()
-		}
-	}
-}
-
-let actions = {
-	set ({commit}, val) {
-		commit('SET_TIMBRE', val)
-		// todo verif
-		commit('SET_TONE', val)
-	}
-}
+import {findKey, filter} from 'lodash'
 
 export default {
-	namespaced: true,
-	state,
-	// getters,
-	actions,
-	mutations
-}
+			namespaced: true,
+			getters: {
+				findHash (s) {
+  				return (hash) => {
+						return findKey(s, (v) => { return v.hash === hash })
+					}
+				},
+				synths (s) {
+					var res = filter(s, (val, key) => {
+						return (key !== 'nb')
+					}).map(v => { return v.toneSynth })
+					return res.length === 0 ? [new Tone.Synth().toMaster()] : res
+				}
+			},
+			actions: {
+				setTimbre ({getters, dispatch, rootGetters}, {hash, index, val}) {
+					var indexHash = getters.findHash(hash)
+					dispatch(indexHash + '/set', val)
+					// console.log(rootGetters['mels/partsForSynthIndex'](index))
+				}
+			},
+			state: {
+				nb: 0
+			}
+		}

@@ -1,7 +1,6 @@
 
 import {populate, setPart, setMidi} from './populate'
-import {findKey, filter, isEmpty} from 'lodash'
-import Tone from 'tone'
+import {findKey} from 'lodash'
 
 import Vue from 'vue'
 import VueX from 'vuex'
@@ -13,9 +12,9 @@ const store = new VueX.Store({
 		parts: []
 	},
 	getters: {
-		parts (s) {
-			return s.parts
-		},
+		// parts (s) {
+		// 	return s.parts
+		// },
 		midi (s) {
 			return s.midi
 		},
@@ -26,7 +25,7 @@ const store = new VueX.Store({
 					res.push(s.timbres[key])
 				}
 			}
-			return !(isEmpty(res)) ? res : [new Tone.Synth().toMaster()]
+			return res
 		}
 	},
 	mutations: {
@@ -69,52 +68,8 @@ const store = new VueX.Store({
 		}
 	},
 	modules: {
-		mels: {
-			namespaced: true,
-			getters: {
-				// parts (s, getters) {
-				// 	console.log('oui???')
-				// 	var res = []
-				// 	for (var key in s) {
-				// 		res.push(getters[key + '/part'])
-				// 	}
-				// 	return res
-				// },
-				partsForSynthIndex (s, getters) {
-					console.log(s)
-					return (index) => {
-						console.log(s)
-						return filter(s, v => { return v.indexTimbre === index })
-					}
-				}
-			}
-		},
-		timbres: {
-			namespaced: true,
-			getters: {
-				findHash (s) {
-  				return (hash) => {
-						return findKey(s, (v) => { return v.hash === hash })
-					}
-				},
-				synths (s) {
-					var res = filter(s, (val, key) => {
-						return (key !== 'nb')
-					}).map(v => { return v.toneSynth })
-					return res.length === 0 ? [new Tone.Synth().toMaster()] : res
-				}
-			},
-			actions: {
-				setTimbre ({getters, dispatch, rootGetters}, {hash, index, val}) {
-					var indexHash = getters.findHash(hash)
-					dispatch(indexHash + '/set', val)
-					console.log(rootGetters['mels/partsForSynthIndex'](index))
-				}
-			},
-			state: {
-				nb: 0
-			}
-		}
+		mels: require('./mels').default,
+		timbres: require('./timbres').default
 	}
 })
 

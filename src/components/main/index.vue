@@ -5,6 +5,8 @@
       <button @click="toggle"> stop </button>
       <button @click="panic"> panic </button>
     </div>
+    <transport></transport>
+    <!-- <log>{{ children }}</log> -->
   </div>
 </template>
 
@@ -22,14 +24,20 @@
 <script>
 
 import Tone from 'tone'
-import {mapGetters} from 'vuex'
+import {mapGetters, mapActions} from 'vuex'
+import log from '#/general/log'
+import transport from './transport'
 
 export default {
   name: 'app',
+  components: {log, transport},
   data () {
     return {
-      tempo: 10
+      tempo: 60
     }
+  },
+  created () {
+    Tone.Transport.bpm.value = this.tempo
   },
   computed: {
     ...mapGetters('mels', {
@@ -42,42 +50,16 @@ export default {
     }
   },
   methods: {
-    stop () {
-      for (var i = 0; i < this.children.length; i++) {
-        var child = this.children[i]
-        child.stop()
-      }
-      Tone.Transport.stop()
-    },
-    all () {
-      for (var i = 0; i < this.children.length; i++) {
-        var child = this.children[i]
-        child.start()
-      }
-    },
-    toggle () {
-      // toggles all if one is stopped, else stop all
-      loop: {
-        for (var i = 0; i < this.children.length; i++) {
-          var child = this.children[i]
-          if (child.state === 'stopped') {
-            Tone.Transport.start()
-            this.all()
-            break loop
-          }
-        }
-        this.stop()
-      }
-    },
+    ...mapActions('mels', {
+      stop: 'stopAll',
+      toggle: 'toggleAll'
+    }),
     panic () {
       this.stop()
-      Tone.context.close()
-      Tone.context = new AudioContext()
       Tone.Transport.stop()
-      // for (var i = 0; i < this.children.length; i++) {
-      //   var child = this.children[i]
-      //   child.create()
-      // }
+      // en mode gros bourrin de ouf
+      // Tone.context.close()
+      // Tone.context = new AudioContext()
     }
   }
 }

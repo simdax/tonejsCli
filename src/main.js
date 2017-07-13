@@ -7,6 +7,9 @@ import store from './stores'
 
 global.s = store
 
+import Tone from 'tone'
+global.Tone = Tone
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
@@ -16,7 +19,7 @@ new Vue({
   router,
   template: `
   <div>
-	  <div   v-for="route in $router.options.routes">
+	  <div v-for="route in $router.options.routes">
 			<router-link :to='route.path'>{{route.path}}</router-link>
 	  </div>
 		<router-view></router-view>
