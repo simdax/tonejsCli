@@ -1,6 +1,11 @@
 <template>
 <div>
-	<p>{{transport.state}}</p>
+  <button @click="go">
+    {{transport.state}}
+  </button>
+    <button @click="transport.loopEnd -= parseInt(1)">-</button>
+    {{transport.loopEnd}}
+    <button @click="transport.loopEnd += parseInt(1)">+</button>
 </div>
 </template>
 
@@ -10,15 +15,20 @@ import Tone from 'tone'
 
 export default {
 
-  name: 'transport',
-  watch: {
-  	'transport.state': {
-  		deep: true,
-  		handler (a, b, c, d) {
-  			// console.log(a, b, c, d)
-  		}
-  	}
-  },
+name: 'transport',
+created () {
+Tone.Transport.loopEnd = '1m'
+Tone.Transport.loop = true
+},
+methods: {
+    loop (e) {
+	console.log(e)
+    Tone.Transport.loopEnd
+},
+go () {
+Tone.Transport.state === 'started' ? Tone.Transport.stop() : Tone.Transport.start()
+}
+},
   data () {
     return {
     	transport: Tone.Transport

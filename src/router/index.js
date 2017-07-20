@@ -1,10 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-import App from '#/main/index'
 import tests from '#/tests/index.vue'
 import timbre from '#/timbre/main'
-import filter from '#/timbre/freeverb'
+// import filter from '#/timbre/freeverb'
 import harmonisation from '#/harmonisation/main'
 import instruments from '#/instruments/index'
 import stat from '#/stats/main'
@@ -21,7 +20,11 @@ export default new Router({
     {
       path: '/',
       name: 'main',
-      component: App
+      component: {
+        template: `
+          <h1>Welcome ! </h1>
+        `
+      }
     },
     {
       path: '/timbre',
@@ -32,10 +35,12 @@ export default new Router({
       path: '/instruments',
       component: instruments
     },
-    {
-      path: '/filter',
-      component: filter
-    },
+    // game router
+    require('./gameRouter').default,
+    // {
+    //   path: '/filter',
+    //   component: filter
+    // },
     {
       path: '/harmo',
       component: harmonisation
@@ -43,10 +48,10 @@ export default new Router({
     {
       path: '/stat',
       component: stat
-    },
-    {
-      path: '*',
-      component: { template: `<div>OH NOOOOON !!!</div>` }
     }
+    // {
+    //   path: '*',
+    //   component: { template: `<div>OH NOOOOON !!!</div>` }
+    // }
   ]
 })

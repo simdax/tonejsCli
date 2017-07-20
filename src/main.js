@@ -4,6 +4,9 @@
 import Vue from 'vue'
 import router from './router'
 import store from './stores'
+import navbar from './components/main/index'
+
+import './main.css'
 
 global.s = store
 
@@ -17,12 +20,16 @@ new Vue({
   el: '#app',
   store,
   router,
+  components: {navbar},
   template: `
-  <div>
-	  <div v-for="route in $router.options.routes">
-			<router-link :to='route.path'>{{route.path}}</router-link>
-	  </div>
-		<router-view></router-view>
-  </div>
-  `
+    <div>
+      <navbar></navbar>
+       <div class="tabs">
+      <div class="tabs" v-for="route in $router.options.routes">
+          <router-link :to='route.path'>{{route.path}}</router-link>
+      </div>
+    </div>    
+             <router-view></router-view>
+    </div>
+    `
 })
