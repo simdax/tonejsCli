@@ -12,6 +12,12 @@ global.s = store
 
 import Tone from 'tone'
 global.Tone = Tone
+// import Play from './lib/Play'
+// import Rhythm from './lib/Rhythm'
+import Mel from './lib/Melody'
+global.Mel = Mel
+// global.Play = Play
+// global.Rhythm = Rhythm
 
 Vue.config.productionTip = false
 

@@ -1,10 +1,10 @@
 <template>
-<div>
-	<p> partition : {{isOk}} </p>
-	<div v-for="i in notes">
-		{{i}}
-	</div>
-</div>
+  <div>
+    <p> partition : {{isOk}} </p>
+    <div v-for="i in notes">
+      {{i}}
+    </div>
+  </div>
 </template>
 
 <script>

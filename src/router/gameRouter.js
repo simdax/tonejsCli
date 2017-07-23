@@ -2,23 +2,33 @@ import imitation from '@/components/game/imitation'
 import rythme from '@/components/game/rythme'
 
 var main = {
-	template: `
-		<router-view></router-view>
-	`
+  template: `
+          <div>
+        <router-link v-for="name in names" :key="name" :to="name"> {{name}} </router-link>
+        <router-view></router-view>
+    </div>
+    `,
+  data () {
+    return {
+      names: 'imitation,rythme'.split(',')
+    }
+  }
 }
 
 export default {
-	path: '/game',
-	component: main,
-	children: [
-		{
-			path: 'test',
-			component: imitation
-		},
-		{
-			path: 'rythme',
-			component: rythme
-		}
-	]
+  path: '/game',
+  component: main,
+  children: [
+    {
+      path: 'imitation',
+      component: imitation,
+      name: 'imitation'
+    },
+    {
+      path: 'rythme',
+      component: rythme,
+      name: 'rythme'
+    }
+  ]
 }
 

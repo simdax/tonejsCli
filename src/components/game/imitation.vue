@@ -1,46 +1,42 @@
 <template>
 
-<div>
-	salut petite pute
-  <button @click="play"> play </button>
-</div>
+  <div>
+    salut petite pute
+    {{mels}}
+  </div>
 
 </template>
 
 <script>
 
-	import keys from './keys'
-  import Play from '@/lib/Play'
-  import random from './randomMel'
-  let p = new Play()
+import keys from './keys'
+import TimedMel from '@/lib/TimedMel'
 
 export default {
 
-  name: 'imitation',
-  mounted () {
-    this.create()
-  },
-  methods: {
-    play () {
-      var mel = random(3)
-      console.log(mel)
-      p.mel(mel)
+    name: 'imitation',
+    mounted () {
+	this.create()
     },
-    create () {
-      window.addEventListener('keydown', this.keys)
+    beforeDestroy () {
+	this.destroy()
     },
-    destroy () {
-      window.removeEventListener('keydown', this.key)
-    },
-  	keys
+    methods: {
+	create () {
+	    window.addEventListener('keydown', this.keys)
 	},
-  data () {
-    return {
-
+	destroy () {
+	    window.removeEventListener('keydown', this.keys)
+	},
+  	keys
+    },
+    data () {
+	return {
+	    mels: new TimedMel()
+	}
     }
-  }
 }
-</script>
+  </script>
 
 <style lang="css" scoped>
 </style>

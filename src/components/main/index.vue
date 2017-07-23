@@ -11,15 +11,15 @@
 </template>
 
 <style>
-  #addCell{
+#addCell{
     position: fixed;
     left: 0;
     top: 50%;
     width: 50px;
     height: 50px;
     background-color: tomato
-  }
-</style>
+}
+  </style>
 
 <script>
 
@@ -29,56 +29,56 @@ import log from '#/general/log'
 import transport from './transport'
 
 export default {
-  name: 'app',
-  components: {log, transport},
-  data () {
-    return {
-      tempo: 60
+    name: 'app',
+    components: {log, transport},
+    data () {
+	return {
+	    tempo: 60
+	}
+    },
+    created () {
+	Tone.Transport.bpm.value = this.tempo
+    },
+    computed: {
+	    ...mapGetters('mels', {
+		children: 'parts'
+	    })
+    },
+    watch: {
+	tempo () {
+	    Tone.Transport.bpm.value = this.tempo
+	}
+    },
+    methods: {
+	    ...mapActions('mels', {
+		stop: 'stopAll',
+		toggle: 'toggleAll'
+	    }),
+	panic () {
+	    this.stop()
+	    Tone.Transport.stop()
+	    // en mode gros bourrin de ouf
+	    Tone.context.close()
+	    Tone.context = new AudioContext()
+	}
     }
-  },
-  created () {
-    Tone.Transport.bpm.value = this.tempo
-  },
-  computed: {
-    ...mapGetters('mels', {
-      children: 'parts'
-    })
-  },
-  watch: {
-    tempo () {
-      Tone.Transport.bpm.value = this.tempo
-    }
-  },
-  methods: {
-    ...mapActions('mels', {
-      stop: 'stopAll',
-      toggle: 'toggleAll'
-    }),
-    panic () {
-      this.stop()
-      Tone.Transport.stop()
-      // en mode gros bourrin de ouf
-      // Tone.context.close()
-      // Tone.context = new AudioContext()
-    }
-  }
 }
-</script>
+  </script>
 
 <style>
-  #settings{
-    background: url(../../assets/logo.svg);
-    background-size: contain;
-    top: 0;
-    height: 150px;
-    width: 50%;
-    margin: auto;
+#settings{
+      background: url(../../assets/logo.svg);
+      background-size: contain;
+      top: 0;
+      height: 150px;
+      width: 50%;
+      margin: auto;
   }
   #app {
-    font-family: 'Avenir', Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
+      font-family: 'Avenir', Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-align: center;
+      color: #2c3e50;
   }
-</style>
+  </style>
