@@ -1,20 +1,41 @@
 
 <template>
-
-  <div>
+  <main>
     <h1>gros rythme de ouf</h1>
-    {{rythme[rythme.length - 1]}}
-    rythme
-    {{mel.rythmes}}
-    <input type="number" v-for="(rythme,i) in mel.rythmes" v-model.number="mel.rythmes[i]"/>
-    <!-- {{mel.notes}} -->
-<!-- <input type="number" v-for="(note,i) in mel.notes" v-model.number="mel.notes[i]">{{note}}</option> -->
-<button @click = "mel.play()">play</button>
-  </div>
+    <bob>
+      <p>rythme {{rythmes}} </p>
+      <input type="number" v-for="(rythme,i) in rythmes" v-model.number="rythmes[i]"/>
+      <p>note {{notes}} </p>
+      <input type="number" v-for="(note,i) in notes" v-model.number="notes[i]"/>
+    </bob>
+    <button @click = "mel.play()">play</button>
+    <p>coucou</p>
+  </main>
 </template>
 
-<script>
+<style lang="sass" scoped>
 
+$bob: (h1, bob, button, p)
+
+@each $part in $bob
+  #{$part}
+    grid-area: #{$part}
+   
+main
+  display: grid
+  border: 1px solid black
+  grid-template: 1fr / 1fr 1fr
+  grid-template-areas: "h1 h1" "bob bob"  "button p"
+
+bob
+  display: flex
+  justify-content: center
+h1
+  text-align: center
+</style>
+
+<script>
+  
 import Tone from 'tone'
 import Melody from '@/lib/Melody'
 
@@ -25,6 +46,12 @@ export default {
 	}
     },
     computed: {
+	rythmes () {
+	    return this.mel.rythmes
+	},
+	notes () {
+	    return this.mel.notes
+	}
     },
     mounted () {
 	this.create()
@@ -39,7 +66,7 @@ export default {
     },
     methods: {
 	keys () {
-	    this.rythme.push(Tone.Transport.position)
+	    this.rythmes.push(Tone.Transport.position)
 	},
 	create () {
 	    window.addEventListener('keydown', this.keys)
@@ -50,4 +77,4 @@ export default {
     }
 }
 
-      </script>
+</script>

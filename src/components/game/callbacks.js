@@ -1,15 +1,16 @@
 import Play from '@/lib/Play'
-import Tone from 'tone'
 
 var play = new Play()
 
 export default {
-  'q' () {
-    this.mels.reschedule(Tone.Transport.position, '-')
+  'q,l' () {
+    this.record.reschedule('-')
+    this.$refs.ronds.on(0)
     play.acc(0)
   },
-  's' () {
-    this.mels.reschedule(Tone.Transport.position, '+')
+  's,m' () {
+    this.record.reschedule('+')
+    this.$refs.ronds.on(1)
     play.acc(1)
   }
 }

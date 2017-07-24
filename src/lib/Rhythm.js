@@ -1,14 +1,14 @@
 import * as _ from 'lodash'
 
-function Rhythm () {
+class Rhythm {
 
-}
+  constructor () {
 
-Rhythm.prototype = {
+  }
   random (n) {
     return _.times(n, () => _.sample(['-', '+']))
     // return this.set(times(n, random(1, 2)))
-  },
+  }
   // by groups
   setByGroups (groups, notes) {
     var res = []
@@ -25,8 +25,6 @@ Rhythm.prototype = {
       }
     }
     return res
-  },
-  set (array) {
   }
 }
 

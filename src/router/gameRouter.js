@@ -4,7 +4,7 @@ import rythme from '@/components/game/rythme'
 var main = {
   template: `
           <div>
-        <router-link v-for="name in names" :key="name" :to="name"> {{name}} </router-link>
+        <router-link v-for="name in names" :key="name" :to="{name}"> {{name}} </router-link>
         <router-view></router-view>
     </div>
     `,

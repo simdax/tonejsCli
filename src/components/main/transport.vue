@@ -6,7 +6,7 @@
     <button @click="transport.loopEnd -= parseInt(1)">-</button>
     {{transport.loopEnd}}
     <button @click="transport.loopEnd += parseInt(1)">+</button>
-    <button @click="restart"> restart </button>
+
     <button @click="transport.loop =! transport.loop"> looping : {{loopState}} </button>
     <br/>
 {{transport.position}}
@@ -22,7 +22,7 @@ export default {
     name: 'transport',
     created () {
 	Tone.Transport.loopEnd = '1m'
-	// Tone.Transport.loop = true
+	Tone.Transport.loop = true
     },
     computed: {
 	loopState () {
