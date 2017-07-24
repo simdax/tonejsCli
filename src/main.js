@@ -12,7 +12,7 @@ global.s = store
 
 import Tone from 'tone'
 global.Tone = Tone
-import Mel from './lib/melAbsDur'
+import Mel from './lib/Melody'
 global.Mel = Mel
 
 Vue.config.productionTip = false

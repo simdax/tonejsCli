@@ -1,5 +1,5 @@
-import imitation from '@/components/game/imitation'
-import rythme from '@/components/game/rythme'
+import imitation from '@/components/game/imitation/index'
+import rythme from '@/components/game/rythme/index'
 
 var main = {
   template: `

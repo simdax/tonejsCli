@@ -12,7 +12,7 @@
 
 <script>  
 
-  import keys from './keys'
+import keys from './keys'
 import TimedMel from '@/lib/TimedMel'
 import Player from '@/lib/Play'
 import melAbsDur from '@/lib/melAbsDur'
@@ -49,7 +49,8 @@ export default {
 	},
   	keys
     }
-}
+  }
+  
 </script>
 
 <style scoped lang="sass">
